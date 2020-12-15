@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="20px" height="20px" viewbox="0 0 20 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="Group-3-Copy-2" transform="translate(0.5 0.5)">
+    <path d="M9.5 19C14.7467 19 19 14.7467 19 9.5C19 4.25329 14.7467 0 9.5 0C4.25329 0 0 4.25329 0 9.5C0 14.7467 4.25329 19 9.5 19Z" id="Oval" fill="#8E7CAF" fill-opacity="0.5529412" fill-rule="evenodd" stroke="none" />
+    <g id="Icon-(Left)" transform="matrix(0.70710665 0.7071069 -0.7071069 0.70710665 9.500366 0.30773926)">
+      <path d="M7 0L6 0L6 6L0 6L0 7L6 7L6 13L7 13L7 7L13 7L13 6L7 6L7 0Z" transform="matrix(0.9999999 1.4210855E-14 -1.4210855E-14 0.9999999 0.00012207031 -6.1035156E-05)" id="🎨-Icon-color" fill="#452B78" fill-rule="evenodd" stroke="none" />
+    </g>
+  </g>
+</svg>

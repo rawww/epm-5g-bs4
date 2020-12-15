@@ -1,0 +1,236 @@
+/* ==========================================================================
+_Variables.scss over rides
+========================================================================== */
+
+$primary: #452B78;
+$primary_light: #DDD8E6;
+$primary_lighter: #F2F5F8;
+$primary_dark: #322450;
+
+$white: #ffffff;
+$lightgrey: #F3F3F3;
+
+$ui_1: #76C987;
+$ui_2: #41BFB0;
+$ui_3: #E3C636;
+$ui_3_light: #F7EEC2 ;
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    10: ($spacer * 6),
+  ),
+  $spacers
+);
+
+// Tooltips
+
+$tooltip-bg:                        $primary;
+$tooltip-padding-y:                 .25rem !default;
+$tooltip-padding-x:                 1rem !default;
+
+.bs-tooltip-bottom {
+  margin-top:5px !important;
+}
+
+// Font family
+
+$font-family-sans-serif:'Nunito Sans', sans-serif;
+
+// Dropdown
+
+$dropdown-min-width:                15rem;
+$dropdown-bg:                       $primary_dark;
+$dropdown-border-radius:            0;
+$dropdown-link-hover-bg:            $primary;
+$dropdown-link-hover-color:         $white;
+$dropdown-item-padding-y:           1rem !default;
+$dropdown-item-padding-x:           1.5rem !default;
+
+.dropdown-menu {
+    top: 97% !important;
+    left: -1px !important;
+}
+
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+/* ==========================================================================
+Custom Helpers
+========================================================================== */
+.bgcenter {
+  background-position: center center;
+}
+
+.bgcover {
+  background-size: cover;
+}
+
+.no-arrow.dropdown-toggle::after {
+  display:none;
+}
+
+/* ==========================================================================
+Mixins
+========================================================================== */
+
+@mixin fade-all() {
+	transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-webkit-transition: all 0.7s;
+	-o-transition: all 0.7s;
+}
+
+/* ==========================================================================
+High level selectors
+========================================================================== */
+
+a {
+  @include fade-all;
+}
+
+/* ==========================================================================
+Navigation
+========================================================================== */
+
+nav.navbar {
+  padding:0;
+  background:$primary;
+  a {
+    color:$white;
+  }
+
+  .dropdown-toggle {
+    padding: 26px 20px !important;
+    margin-right:20px;
+    border-right:1px solid $primary_light;
+  }
+
+  .nav-item.show {
+    .dropdown-toggle {
+      background:$primary_dark;
+    }
+  }
+
+  .nav-right {
+    a {
+      padding:25px 30px;
+      display:block;
+      border-left:1px solid $primary_light;
+    }
+  }
+
+  .nav-avatar {
+    position:relative;
+    a {
+      width:75px;
+      height:75px;
+    }
+    img {
+      width:52px;
+      height:52px;
+      position:absolute;
+      top: 12px;
+      left: 20px;
+    }
+  }
+
+  .nav-tabs {
+    margin-top: 20px;
+    border-bottom:0;
+    .nav-link.active {
+      border-top-color: $ui_2;
+      border-top-width: 4px;
+      a {
+        color:$primary;
+      }
+    }
+    li a {
+      position:relative;
+      padding:15px 40px 15px 20px;
+      background:#553D84;
+      margin-right: 5px;
+      img {
+        position:absolute;
+        top: 18px;
+        right: 11px;
+      }
+    }
+  }
+}
+
+
+
+nav.navbar.nav-secondary {
+    border-bottom:1px solid $primary_light;
+    padding:10px 15px;
+
+    .nav-item {
+      border:1px solid $primary_light;
+      border-radius:4px;
+      padding: 20px;
+      margin-right: 10px;
+      display: inline-block;
+      &:hover {
+        cursor:pointer;
+      }
+    }
+
+    .nav-item-1 {
+      background:url(../img/ico-3dot-inactive.svg) no-repeat center center;
+      &:hover {
+        background:url(../img/ico-3dot-active.svg) no-repeat center center $ui_1;
+      }
+    }
+    .nav-item-2 {
+      background:url(../img/ico-person-inactive.svg) no-repeat center center;
+      &:hover {
+        background:url(../img/ico-person-active.svg) no-repeat center center $ui_1;
+      }
+    }
+    .nav-item-3 {
+      background:url(../img/ico-edit-inactive.svg) no-repeat center center;
+      &:hover {
+        background:url(../img/ico-edit-active.svg) no-repeat center center $ui_1;
+      }
+    }
+    .nav-item-4 {
+      background:url(../img/ico-history-inactive.svg) no-repeat center center;
+      &:hover {
+        background:url(../img/ico-history-active.svg) no-repeat center center $ui_1;
+      }
+    }
+    .nav-item-5 {
+      background:url(../img/ico-docs-inactive.svg) no-repeat center center;
+      &:hover {
+        background:url(../img/ico-docs-active.svg) no-repeat center center $ui_1;
+      }
+    }
+    .nav-item-6 {
+      background:url(../img/ico-map-inactive.svg) no-repeat center center;
+      &:hover {
+        background:url(../img/ico-map-active.svg) no-repeat center center $ui_1;
+      }
+    }
+    .nav-item-7 {
+      background:url(../img/ico-graph-inactive.svg) no-repeat center center;
+      &:hover {
+        background:url(../img/ico-graph-active.svg) no-repeat center center $ui_1;
+      }
+    }
+}
+
+/* ==========================================================================
+Footer
+========================================================================== */
+
+.footer {
+    margin-top:3rem;
+}
