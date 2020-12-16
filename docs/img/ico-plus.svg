@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="14px" height="14px" viewbox="0 0 14 14" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M8 0L6 0L6 6L0 6L0 8L6 8L6 14L8 14L8 8L14 8L14 6L8 6L8 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="Icon-(Left)">
+    <g id="🎨-Icon-color">
+      <use stroke="none" fill="#FFFFFF" xlink:href="#path_1" fill-rule="evenodd" />
+      <g clip-path="url(#clip_1)">
+        <use xlink:href="#path_1" fill="none" stroke="#76C987" stroke-width="0.6" />
+      </g>
+    </g>
+  </g>
+</svg>
