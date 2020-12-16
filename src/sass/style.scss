@@ -59,6 +59,21 @@ $dropdown-item-padding-x:           1.5rem !default;
     left: -1px !important;
 }
 
+//Breadcrumbs
+
+$breadcrumb-divider:                quote("");
+$breadcrumb-margin-bottom:          0;
+$breadcrumb-bg:                     transparent;
+
+.breadcrumb-item::before {
+  text-indent:-9000px;
+  background:url(../img/ico-breadcrumb-arrow.svg) no-repeat center center;
+  display:inline-block;
+  height:20px;
+  width:20px;
+  padding: 0px 20px !important;
+  margin-top: 4px;
+}
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
