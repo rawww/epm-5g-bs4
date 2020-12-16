@@ -368,19 +368,28 @@ Sidebar
 }
 
 .sidebar-cards {
+  overflow-y:scroll;
+  height:80vh;
   li {
-    padding:30px 20px;
+    padding:20px 20px;
     border-bottom:1px solid $darkgrey;
     position:relative;
       &:hover {
-        background:$primary_lighter;
-        border-radius: 4px;
+        .inner {
+          border-left-width: 8px;
+          border-left-style: solid;
+          border-left-color: $ui_1;
+          border-radius: 8px;
+          padding:10px 20px 10px 12px;
+          background:$primary_lighter;
+        }
+
         cursor:pointer;
         &:after {
           content: "";
           display: block;
           position: absolute;
-          top: 40px;
+          top: 43px;
           right: 40px;
           width: 20px;
           height: 20px;
@@ -389,6 +398,30 @@ Sidebar
     }
   }
 }
+
+/*
+ *  custom scrollbars
+ */
+
+.scroll-style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #fff;
+}
+
+.scroll-style-1::-webkit-scrollbar
+{
+	width: 5px;
+  border-radius: 5px;
+	background-color: #fff;
+}
+
+.scroll-style-1::-webkit-scrollbar-thumb
+{
+	background-color:  $primary;
+	border: 2px solid  $primary;
+}
+
 
 /* ==========================================================================
 Main Content
