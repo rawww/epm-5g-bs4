@@ -13,6 +13,8 @@ $primary_dark: #322450;
 $white: #ffffff;
 $darkgrey: #DDD8E6;
 $lightgrey: #F3F3F3;
+$black: #000;
+$offblack: #3c3c3c;
 
 $ui_1: #76C987;
 $ui_2: #41BFB0;
@@ -150,9 +152,18 @@ Custom Helpers
   border-bottom:1px solid $darkgrey;
 }
 
+.border-top-light-grey {
+  border-top:1px solid $lightgrey;
+}
+
+.border-top-dark-grey {
+  border-top:1px solid $darkgrey;
+}
+
 .no-list {
   list-style:none;
   padding:0;
+  margin:0;
 }
 
 /* ==========================================================================
@@ -172,6 +183,11 @@ High level selectors
 
 a {
   @include fade-all;
+}
+
+//bottom body spacing for fixed footer
+body {
+  padding-bottom:54px;
 }
 
 /* ==========================================================================
@@ -241,6 +257,68 @@ nav.navbar {
     padding: 26px 20px !important;
     margin-right:20px;
     border-right:1px solid $primary_light;
+  }
+
+  .dropdown-item {
+    padding: 20px 20px 20px 64px;
+  }
+
+  .dropdown-menu {
+    padding:0;
+    .icon-1 {
+      position:relative;
+      &:before {
+        content:"";
+        display:block;
+        width:40px;
+        height:40px;
+        position:absolute;
+        left: 18px;
+        top: 12px;
+        background:url(../img/ico-accidents.svg) no-repeat center left;
+      }
+      &:hover {
+        &:before {
+          background:url(../img/ico-accidents-active.svg) no-repeat center left;
+        }
+      }
+    }
+    .icon-2 {
+      position:relative;
+      &:before {
+        content:"";
+        display:block;
+        width:40px;
+        height:40px;
+        position:absolute;
+        left: 18px;
+        top: 12px;
+        background:url(../img/ico-customers.svg) no-repeat center left;
+      }
+      &:hover {
+        &:before {
+          background:url(../img/ico-customers-active.svg) no-repeat center left;
+        }
+      }
+    }
+    .icon-3 {
+      position:relative;
+      &:before {
+        content:"";
+        display:block;
+        width:40px;
+        height:40px;
+        position:absolute;
+        left: 18px;
+        top: 12px;
+        background:url(../img/ico-insights.svg) no-repeat center left;
+      }
+      &:hover {
+        &:before {
+          background:url(../img/ico-insights-active.svg) no-repeat center left;
+        }
+      }
+    }
   }
 
   .nav-item.show {
@@ -361,7 +439,7 @@ nav.navbar.nav-secondary {
 Sidebar
 ========================================================================== */
 .col-sidebar {
-  padding:0;
+  padding:146px 0 0 0;
   .inner {
     padding:10px 20px;
   }
@@ -369,7 +447,7 @@ Sidebar
 
 .sidebar-cards {
   overflow-y:scroll;
-  height:80vh;
+  height:69vh;
   li {
     padding:20px 20px;
     border-bottom:1px solid $darkgrey;
@@ -405,35 +483,78 @@ Sidebar
 
 .scroll-style-1::-webkit-scrollbar-track
 {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #fff;
+	background-color: #F7F3FF;
 }
 
 .scroll-style-1::-webkit-scrollbar
 {
-	width: 5px;
+	width: 6px;
   border-radius: 5px;
 	background-color: #fff;
 }
 
 .scroll-style-1::-webkit-scrollbar-thumb
 {
+
 	background-color:  $primary;
 	border: 2px solid  $primary;
+  border-radius:5px;
 }
 
 
 /* ==========================================================================
 Main Content
 ========================================================================== */
+
 .col-main-content {
+  padding-top:146px + 20px !important;
+  overflow-y:scroll;
+  height:94vh;
   background:$lightgrey;
+  padding:20px;
+  h1,h2,h3,h4,h5,h6 {
+    color:$primary;
+    margin-bottom:20px;
+  }
+  p, li {
+    color:$offblack;
+  }
+  @include media-breakpoint-up(md) {
+    padding:30px 60px;
+  }
+
+  //each block within main content div
+  section {
+    background:$white;
+    border-radius:4px;
+    padding:20px;
+    margin-bottom:20px;
+    @include media-breakpoint-up(md) {
+      padding:30px;
+    }
+  }
 }
 
 /* ==========================================================================
-Footer
+Fixed Footer
 ========================================================================== */
 
 .footer {
-    margin-top:3rem;
+  padding:10px;
+  @include media-breakpoint-up(md) {
+    padding:15px 40px;
+  }
+  background:$white;
+}
+
+ul.footer-values {
+  li {
+    display:inline-block;
+    padding-right:15px;
+    span.value {
+      background:$ui_3_light;
+      padding:5px 10px;
+      border-radius:15px;
+    }
+  }
 }

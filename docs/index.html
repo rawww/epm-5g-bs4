@@ -15,6 +15,7 @@
     </head>
     
     <body>
+        <div class="d-sm-block d-md-done mobile-warning">Hello</div>
         <!-- md down top nav -->
         <nav class="navbar navbar-expand-md navbar-dark d-sm-flex d-md-none">
             <ul class="navbar-nav mr-auto">
@@ -29,95 +30,97 @@
         </nav>
         <!-- / md down top nav -->
         <!-- medium up top nav -->
-        <nav class="navbar navbar-expand-md navbar-dark d-none d-md-flex">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle no-arrow" href="#" id="navbarDropdownMenuLink"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="fixed-top">
+            <nav class="navbar navbar-expand-md navbar-dark d-none d-md-flex">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle no-arrow" href="#" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
         <img alt="" src="img/ico-hamburger.svg"/>
 
       </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="#">Accidents</a> <a class="dropdown-item"
-                        href="#">Customers</a> <a class="dropdown-item" href="#">Insights</a>
-                    </div>
-                </li>
-            </ul> <a class="navbar-brand mr-10" href="#"><img alt="EPM" src="img/logo.svg"/></a>
-            <ul
-            class="nav nav-tabs mr-auto">
-                <li class="nav-item"> <a class="nav-link active" href="#">
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item icon-1" href="#">Accidents</a> <a class="dropdown-item icon-2"
+                            href="#">Customers</a> <a class="dropdown-item icon-3" href="#">Insights</a>
+                        </div>
+                    </li>
+                </ul> <a class="navbar-brand mr-10" href="#"><img alt="EPM" src="img/logo.svg"/></a>
+                <ul
+                class="nav nav-tabs mr-auto">
+                    <li class="nav-item"> <a class="nav-link active" href="#">
 
         Accidents
 
         <img alt="" src="img/ico-close-tab.svg"/>
 
       </a>
-                </li>
-                <li class="nav-item"> <a class="nav-link" href="#">
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">
 
         Customers
 
         <img alt="" src="img/ico-close-tab.svg"/>
 
       </a>
-                </li>
-                <li class="nav-item"> <a class="nav-link" href="#">
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">
 
         Insights
 
         <img alt="" src="img/ico-close-tab.svg"/>
 
       </a>
-                </li>
-                </ul>
-                <ul class="navbar-nav nav-right">
-                    <li class="nav-item alert-dot-black-border"> <a href="#"><img alt="" src="img/ico-alert.svg"/></a>
                     </li>
-                    <li class="nav-item"> <a href="#"><img alt="" src="img/ico-star.svg"/></a>
-                    </li>
-                    <li class="nav-item"> <a href="#"><img alt="" src="img/ico-cog.svg"/></a>
-                    </li>
-                    <li class="nav-item nav-avatar"> <a href="#"><img class="rounded-circle" alt="" src="img/avatar.jpg"/></a>
-                    </li>
-                </ul>
-        </nav>
-        <!-- / large up top nav ends -->
-        <nav class="navbar nav-secondary bg-white navbar-expand-lg navbar-dark d-none d-lg-flex">
-            <div class="mr-auto">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item active"><a href="#"><img alt="home" src="img/ico-breadcrumb-home.svg"/></a>
-
+                    </ul>
+                    <ul class="navbar-nav nav-right">
+                        <li class="nav-item alert-dot-black-border"> <a href="#"><img alt="" src="img/ico-alert.svg"/></a>
                         </li>
-                        <li class="breadcrumb-item" aria-current="page">Page</li>
-                        <li class="breadcrumb-item" aria-current="page">Page</li>
-                    </ol>
-                </nav>
-            </div>
-            <ul class="navbar-nav nav-secondary-right mr-4">
-                <li class="nav-item nav-item-1" data-toggle="tooltip" data-placement="bottom"
-                title="Details"> <a href="#"></a>
-                </li>
-                <li class="nav-item nav-item-2" data-toggle="tooltip" data-placement="bottom"
-                title="Details"> <a href="#"></a>
-                </li>
-                <li class="nav-item nav-item-3" data-toggle="tooltip" data-placement="bottom"
-                title="Details"> <a href="#"></a>
-                </li>
-                <li class="nav-item nav-item-4" data-toggle="tooltip" data-placement="bottom"
-                title="Details"> <a href="#"></a>
-                </li>
-                <li class="nav-item nav-item-5  alert-dot-white-border" data-toggle="tooltip"
-                data-placement="bottom" title="Details"> <a href="#"></a>
-                </li>
-                <li class="nav-item nav-item-6" data-toggle="tooltip" data-placement="bottom"
-                title="Details"> <a href="#"></a>
-                </li>
-                <li class="nav-item nav-item-7" data-toggle="tooltip" data-placement="bottom"
-                title="Details"> <a href="#"></a>
-                </li>
-            </ul>
-            <button type="button" class="btn btn-dropdown btn-secondary">Save & Close</button>
-        </nav>
+                        <li class="nav-item"> <a href="#"><img alt="" src="img/ico-star.svg"/></a>
+                        </li>
+                        <li class="nav-item"> <a href="#"><img alt="" src="img/ico-cog.svg"/></a>
+                        </li>
+                        <li class="nav-item nav-avatar"> <a href="#"><img class="rounded-circle" alt="" src="img/avatar.jpg"/></a>
+                        </li>
+                    </ul>
+            </nav>
+            <!-- / large up top nav ends -->
+            <nav class="navbar nav-secondary bg-white navbar-expand-lg navbar-dark d-none d-lg-flex">
+                <div class="mr-auto">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active"><a href="#"><img alt="home" src="img/ico-breadcrumb-home.svg"/></a>
+
+                            </li>
+                            <li class="breadcrumb-item" aria-current="page">Page</li>
+                            <li class="breadcrumb-item" aria-current="page">Page</li>
+                        </ol>
+                    </nav>
+                </div>
+                <ul class="navbar-nav nav-secondary-right mr-4">
+                    <li class="nav-item nav-item-1" data-toggle="tooltip" data-placement="bottom"
+                    title="Details"> <a href="#"></a>
+                    </li>
+                    <li class="nav-item nav-item-2" data-toggle="tooltip" data-placement="bottom"
+                    title="Details"> <a href="#"></a>
+                    </li>
+                    <li class="nav-item nav-item-3" data-toggle="tooltip" data-placement="bottom"
+                    title="Details"> <a href="#"></a>
+                    </li>
+                    <li class="nav-item nav-item-4" data-toggle="tooltip" data-placement="bottom"
+                    title="Details"> <a href="#"></a>
+                    </li>
+                    <li class="nav-item nav-item-5  alert-dot-white-border" data-toggle="tooltip"
+                    data-placement="bottom" title="Details"> <a href="#"></a>
+                    </li>
+                    <li class="nav-item nav-item-6" data-toggle="tooltip" data-placement="bottom"
+                    title="Details"> <a href="#"></a>
+                    </li>
+                    <li class="nav-item nav-item-7" data-toggle="tooltip" data-placement="bottom"
+                    title="Details"> <a href="#"></a>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-dropdown btn-secondary">Save & Close</button>
+            </nav>
+        </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3 col-sm-12 col-sidebar">
@@ -163,11 +166,70 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-9 col-sm-12 col-main-content">content</div>
+                <div class="col-md-9 col-sm-12 col-main-content scroll-style-1">
+                     <h2>Header</h2>
+                    <section>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur
+                            interdum purus sed eleifend. Pellentesque habitant morbi tristique senectus
+                            et netus et malesuada fames ac turpis egestas. Ut maximus ornare sem ut
+                            condimentum. Etiam et iaculis felis, eu ullamcorper urna.</p>
+                    </section>
+                     <h2>Header</h2>
+                    <section>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur
+                            interdum purus sed eleifend. Pellentesque habitant morbi tristique senectus
+                            et netus et malesuada fames ac turpis egestas. Ut maximus ornare sem ut
+                            condimentum. Etiam et iaculis felis, eu ullamcorper urna.</p>
+                    </section>
+                     <h2>Header</h2>
+                    <section>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur
+                            interdum purus sed eleifend. Pellentesque habitant morbi tristique senectus
+                            et netus et malesuada fames ac turpis egestas. Ut maximus ornare sem ut
+                            condimentum. Etiam et iaculis felis, eu ullamcorper urna.</p>
+                    </section>
+                     <h2>Header</h2>
+                    <section>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur
+                            interdum purus sed eleifend. Pellentesque habitant morbi tristique senectus
+                            et netus et malesuada fames ac turpis egestas. Ut maximus ornare sem ut
+                            condimentum. Etiam et iaculis felis, eu ullamcorper urna.</p>
+                    </section>
+                     <h2>Header</h2>
+                    <section>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur
+                            interdum purus sed eleifend. Pellentesque habitant morbi tristique senectus
+                            et netus et malesuada fames ac turpis egestas. Ut maximus ornare sem ut
+                            condimentum. Etiam et iaculis felis, eu ullamcorper urna.</p>
+                    </section>
+                     <h2>Header</h2>
+                    <section>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur
+                            interdum purus sed eleifend. Pellentesque habitant morbi tristique senectus
+                            et netus et malesuada fames ac turpis egestas. Ut maximus ornare sem ut
+                            condimentum. Etiam et iaculis felis, eu ullamcorper urna.</p>
+                    </section>
+                </div>
             </div>
         </div>
-        <footer class="footer container text-center">
-            <p>&copy; Bootstrap Basic Starter with Gulp</p>
+        <footer class="footer container-fluid fixed-bottom border-top-dark-grey">
+            <ul class="footer-values no-list">
+                <li>Label <span class="value">1</span>
+
+                </li>
+                <li>Label <span class="value">10</span>
+
+                </li>
+                <li>Label <span class="value">6</span>
+
+                </li>
+                <li>Label <span class="value">8</span>
+
+                </li>
+                <li>Label <span class="value">999</span>
+
+                </li>
+            </ul>
         </footer>
         <script src="js/all.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
