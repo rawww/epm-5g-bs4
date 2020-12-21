@@ -2,19 +2,21 @@
 _Variables.scss over rides
 ========================================================================== */
 
-$secondary:     #76C987;
-
-
 $primary: #452B78;
 $primary_light: #DDD8E6;
 $primary_lighter: #F2F5F8;
 $primary_dark: #322450;
+
+$secondary:     #76C987;
+
 
 $white: #ffffff;
 $darkgrey: #DDD8E6;
 $lightgrey: #F3F3F3;
 $black: #000;
 $offblack: #3c3c3c;
+
+$hr: #CCD2D8;
 
 $ui_1: #76C987;
 $ui_2: #41BFB0;
@@ -39,8 +41,24 @@ $spacers: map-merge(
 // buttons
 
 .btn {
-  color:#fff !important;
+  color:$white !important;
+  min-width:50px;
 }
+
+.btn-outline-secondary {
+  color:$secondary !important;
+  &:hover {
+    color:$white !important;
+  }
+}
+
+.btn-outline-primary {
+  color:$primary !important;
+  &:hover {
+    color:$white !important;
+  }
+}
+
 
 .btn.btn-dropdown {
  padding-right:50px;
@@ -48,7 +66,7 @@ $spacers: map-merge(
  &:after {
    position:absolute;
    right:10px;
-   top:10px;
+   top:15px;
    content:'';
    display:inline-block;
    height:20px;
@@ -58,18 +76,36 @@ $spacers: map-merge(
 }
 
 .btn.btn-add {
- // padding-left:50px;
  position:relative;
  &:after {
    position:absolute;
-   left:10px;
-   top:8px;
+   left:14px;
+   top:13px;
    content:'';
    display:inline-block;
    height:20px;
    width:20px;
    background:url(../img/ico-plus.svg) no-repeat center center;
  }
+}
+
+.btn.btn-add-secondary {
+ position:relative;
+ &:after {
+   position:absolute;
+   left:14px;
+   top:13px;
+   content:'';
+   display:inline-block;
+   height:20px;
+   width:20px;
+   background:url(../img/ico-plus-secondary.svg) no-repeat center center;
+ }
+  &:hover {
+     &:after {
+       background:url(../img/ico-plus.svg) no-repeat center center;
+     }
+   }
 }
 
 
@@ -117,6 +153,13 @@ $breadcrumb-bg:                     transparent;
   padding: 0px 20px !important;
   margin-top: 4px;
 }
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:         .75rem;
+$input-btn-padding-x:         .75rem;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
@@ -170,6 +213,24 @@ Custom Helpers
   margin:0;
 }
 
+.input-mt {
+  margin-top:25px;
+}
+
+.primary-color {
+  color:$primary;
+}
+
+.secondary-color {
+  color:$secondary;
+}
+
+.form-label-align-middle {
+  height: 0px;
+  display: inline-block;
+  vertical-align: middle !important;
+}
+
 /* ==========================================================================
 Mixins
 ========================================================================== */
@@ -192,6 +253,17 @@ a {
 //bottom body spacing for fixed footer
 body {
   padding-bottom:54px;
+}
+
+hr {
+  height:1px;
+  border:0;
+  background:$hr;
+  margin:40px 0;
+}
+
+body {
+  overflow-y: hidden;
 }
 
 /* ==========================================================================
@@ -413,47 +485,84 @@ nav.navbar.nav-secondary {
       }
     }
 
+    .nav-item.active {
+      background-color:$ui_2;
+    }
+
     .nav-item-1 {
       background:url(../img/ico-3dot-inactive.svg) no-repeat center center;
       &:hover {
-        background:url(../img/ico-3dot-active.svg) no-repeat center center $ui_1;
+        background:url(../img/ico-3dot-active.svg) no-repeat center center $primary_dark;
       }
     }
+    .nav-item-1.active {
+      background-image:url(../img/ico-3dot-active.svg);
+    }
+
     .nav-item-2 {
       background:url(../img/ico-person-inactive.svg) no-repeat center center;
       &:hover {
-        background:url(../img/ico-person-active.svg) no-repeat center center $ui_1;
+        background:url(../img/ico-person-active.svg) no-repeat center center $primary_dark;
       }
     }
+
+    .nav-item-2.active {
+      background-image:url(../img/ico-person-active.svg);
+    }
+
     .nav-item-3 {
       background:url(../img/ico-edit-inactive.svg) no-repeat center center;
       &:hover {
-        background:url(../img/ico-edit-active.svg) no-repeat center center $ui_1;
+        background:url(../img/ico-edit-active.svg) no-repeat center center $primary_dark;
       }
     }
+
+    .nav-item-3.active {
+      background-image:url(../img/ico-edit-active.svg);
+    }
+
     .nav-item-4 {
       background:url(../img/ico-history-inactive.svg) no-repeat center center;
       &:hover {
-        background:url(../img/ico-history-active.svg) no-repeat center center $ui_1;
+        background:url(../img/ico-history-active.svg) no-repeat center center $primary_dark;
       }
     }
+
+    .nav-item-4.active {
+      background-image:url(../img/ico-history-active.svg);
+    }
+
     .nav-item-5 {
       background:url(../img/ico-docs-inactive.svg) no-repeat center center;
       &:hover {
-        background:url(../img/ico-docs-active.svg) no-repeat center center $ui_1;
+        background:url(../img/ico-docs-active.svg) no-repeat center center $primary_dark;
       }
     }
+
+    .nav-item-5.active {
+      background-image:url(../img/ico-docs-active.svg);
+    }
+
     .nav-item-6 {
       background:url(../img/ico-map-inactive.svg) no-repeat center center;
       &:hover {
-        background:url(../img/ico-map-active.svg) no-repeat center center $ui_1;
+        background:url(../img/ico-map-active.svg) no-repeat center center $primary_dark;
       }
     }
+
+    .nav-item-6.active {
+      background-image:url(../img/ico-map-active.svg);
+    }
+
     .nav-item-7 {
       background:url(../img/ico-graph-inactive.svg) no-repeat center center;
       &:hover {
-        background:url(../img/ico-graph-active.svg) no-repeat center center $ui_1;
+        background:url(../img/ico-graph-active.svg) no-repeat center center $primary_dark;
       }
+    }
+
+    .nav-item-7.active {
+      background-image:url(../img/ico-graph-active.svg);
     }
 }
 
@@ -470,7 +579,7 @@ Sidebar
 
 .sidebar-cards {
   overflow-y:scroll;
-  height:69vh;
+  height:75.5vh;
   li {
     padding:20px 20px;
     border-bottom:1px solid $darkgrey;
@@ -532,7 +641,7 @@ Main Content
 .col-main-content {
   padding-top:146px + 20px !important;
   overflow-y:scroll;
-  height:94vh;
+  height:96vh;
   background:$lightgrey;
   padding:20px;
   h1,h2,h3,h4,h5,h6 {
@@ -542,7 +651,7 @@ Main Content
   p, li {
     color:$offblack;
   }
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     padding:30px 60px;
   }
 
@@ -555,6 +664,138 @@ Main Content
     @include media-breakpoint-up(md) {
       padding:30px;
     }
+  }
+}
+
+//info cards
+
+section.card-info {
+  padding:20px 40px 20px 20px;
+  position: relative;
+}
+
+.card-info {
+  &:after {
+    background-size:25px;
+    content:"";
+    display:block;
+    position:absolute;
+    top:20px;
+    right:20px;
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.card-info.icon-twitter {
+  &:after {
+    background:url(../img/ico-twitter.svg) no-repeat center center;
+  }
+}
+
+.card-info.color-primary {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: $primary;
+  border-radius: 5px;
+}
+
+.card-info.color-secondary {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: $secondary;
+  border-radius: 5px;
+}
+
+.card-info.color-tertiary {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #E3C636;
+  border-radius: 5px;
+}
+
+//address list
+
+.list-addresses {
+  padding:0;
+  border-radius: 5px;
+  border:1px solid $primary_light;
+  margin:20px 0;
+  max-height: 350px;
+  overflow-y: scroll;
+  li {
+    padding:10px 20px;
+    border-bottom:1px solid $primary_light;
+    &:hover {
+      cursor:pointer;
+      background-color:$primary_lighter;
+    }
+  }
+}
+
+//tags
+
+.wrapper-tabs {
+  padding:0 0 20px 0;
+}
+
+.tag {
+  position: relative;
+  display:inline-block;
+  margin:0 15px 15px 0;
+  border-radius:23px;
+  background:#65508F;
+  padding:10px 40px 10px 20px;
+  min-width:100px;
+  color:$white;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background:url(../img/ico-close-tab.svg) no-repeat center center;
+  }
+  &:hover {
+    color:$primary;
+    cursor: pointer;
+    background:$primary_light;
+  }
+}
+
+//links
+
+.list-links {
+  margin-top:20px;
+   li {
+    padding:20px 20px 20px 50px;
+    border-top:1px solid $darkgrey;
+    position:relative;
+    &:before {
+        position:absolute;
+        left:0px;
+        top:18px;
+        display:block;
+        content:"";
+        width:24px;
+        height:24px;
+        background-size: cover;
+        background-repeat:no-repeat;
+    }
+  }
+}
+
+li.link-primary {
+  &:before {
+    background-image:url(../img/ico-link-primary.svg);
+  }
+}
+
+li.link-secondary {
+  &:before {
+    background-image:url(../img/ico-link-secondary.svg);
   }
 }
 
