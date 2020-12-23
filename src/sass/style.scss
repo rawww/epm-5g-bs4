@@ -214,6 +214,24 @@ Custom Helpers
   border-top:1px solid $darkgrey;
 }
 
+
+.border-right-light-grey {
+  border-right:1px solid $lightgrey;
+}
+
+.border-left-dark-grey {
+  border-left:1px solid $darkgrey;
+}
+
+.border-right-light-grey {
+  border-right:1px solid $lightgrey;
+}
+
+.border-right-dark-grey {
+  border-right:1px solid $darkgrey;
+}
+
+
 .svg-white {
   fill:$white;
 }
@@ -293,6 +311,10 @@ hr {
 
 body {
   overflow-y: hidden;
+}
+
+.form-control {
+  border-width: 1px;
 }
 
 /* ==========================================================================
@@ -498,6 +520,15 @@ nav.navbar {
       background:#553D84;
       border-top: 4px solid #553D84;
       margin-right: 5px;
+
+      @include media-breakpoint-up(lg) {
+        padding:15px 40px 15px 20px;
+        font-size:16px;
+      }
+
+      padding: 18px 40px 18px 10px;
+      font-size:10px;
+
       &:hover {
         background:$white;
         color:$primary;
@@ -505,7 +536,10 @@ nav.navbar {
       }
       img {
         position:absolute;
-        top: 18px;
+        top: 16px;
+        @include media-breakpoint-up(lg) {
+          top: 18px;
+        }
         right: 11px;
       }
     }
@@ -643,7 +677,7 @@ Sidebar
           content: "";
           display: block;
           position: absolute;
-          top: 43px;
+          top: 38px;
           right: 40px;
           width: 20px;
           height: 20px;
@@ -880,7 +914,7 @@ section.card-flow {
 
 }
 
-//ste classes
+//step classes
 
 section.card-flow.step {
   &:after {
@@ -910,6 +944,55 @@ section.card-flow.icon-avatar {
   }
 }
 
+
+// history tabs
+
+section.history {
+  padding:0;
+  .nav {
+    margin-top: 5px;
+  }
+  .nav-link {
+    border-radius:6px;
+    border: 1px solid $lightgrey;
+    position:relative;
+    &:before {
+      background-size:cover !important;
+      content:"";
+      display:block;
+      position:absolute;
+      top: 12px;
+      right: 12px;
+      height: 48px;
+      width: 48px;
+    }
+  }
+
+  .nav-link.icon-avatar {
+    &:before {
+      background:url(../img/avatar.jpg) no-repeat center center;
+      border-radius:50%;
+    }
+  }
+
+  .nav-link {
+        border-left-width: 6px;
+        border-left-style: solid;
+        border-left-color: $primary;
+  }
+  .nav-link.active {
+        border-left-width: 6px;
+        border-left-style: solid;
+        border-left-color: $ui_2;
+        background:$lightgrey;
+  }
+  p {
+    margin-bottom:0;
+    color:$primary;
+  }
+
+
+}
 
 
 /* ==========================================================================
