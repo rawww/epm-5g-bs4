@@ -124,8 +124,8 @@ $tooltip-padding-x:                 1rem !default;
 
 .tooltip-inner {
   -webkit-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.32);
--moz-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.32);
-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.32);
+  -moz-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.32);
+  box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.32);
 }
 
 // Font family
@@ -170,6 +170,55 @@ $breadcrumb-bg:                     transparent;
 $input-btn-padding-y:         .48rem;
 $input-btn-padding-x:         .65rem;
 $input-btn-border-width:      2px;
+
+//nav tabs
+$nav-tabs-border-width:        0;
+
+.nav-tabs-horizontal {
+  margin-bottom:20px !important;
+
+
+  //active tab
+  .nav-link.active {
+    background:$ui_2 !important;
+    color:$white !important;
+    border: 1px solid $ui_2 !important;
+  }
+
+  //inactive tab
+  .nav-link {
+    margin-right:20px;
+    border-radius: 0.25rem !important;
+    background:transparent !important;
+    color:$primary !important;
+    border: 1px solid $darkgrey !important;
+  }
+}
+
+//nav tab icons
+
+//edit
+.nav-link.nav-link-edit {
+  position:relative;
+  padding: 0.5rem 1rem 0.5rem 3rem !important;
+  &:before {
+    position: absolute;
+    content:"";
+    display:block;
+    background: url(../img/ico-edit-inactive.svg) no-repeat center center;
+    height:25px;
+    width:25px;
+    left: 10px;
+    top: 8px;
+  }
+}
+
+.nav-link.nav-link-edit.active {
+
+  &:before {
+    background: url(../img/ico-edit-active.svg) no-repeat center center;
+  }
+}
 
 
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -254,10 +303,23 @@ Custom Helpers
   color:$secondary;
 }
 
+.width-100 {
+  width:100%;
+}
+
 .form-label-align-middle {
   height: 0px;
   display: inline-block;
   vertical-align: middle !important;
+}
+
+.value {
+  background: #F7EEC2;
+  color:$primary !important;
+  padding: 3px 8px;
+  margin: 0 0 0 12px;
+  border-radius: 15px;
+  font-size: 12px;
 }
 
 /* ==========================================================================
@@ -336,9 +398,6 @@ mobile overlay
 }
 
 
-input[type=text], input[type=password], input[type=number] {
-  background-color:$field_bg;
-}
 
 /* ==========================================================================
 Navigation
@@ -407,9 +466,9 @@ nav.navbar {
     color:$white;
   }
 
-  .dropdown-toggle {
+  .dropdown-toggle-main {
     padding: 23px 20px !important;
-    margin-right:20px;
+    //margin-right:20px;
     border-right:1px solid $primary_light;
   }
 
@@ -649,7 +708,7 @@ Sidebar
 ========================================================================== */
 
 .col-sidebar {
-  padding:146px 0 0 0;
+  padding:138px 0 0 0;
   .inner {
     padding:10px 20px;
   }
@@ -658,11 +717,13 @@ Sidebar
 .sidebar-cards {
   overflow-y:scroll;
   height:75.5vh;
+
   li {
     padding:15px 20px;
     border-bottom:1px solid $darkgrey;
     position:relative;
       &:hover {
+
         .inner {
           border-left-width: 8px;
           border-left-style: solid;
@@ -717,9 +778,9 @@ Main Content
 ========================================================================== */
 
 .col-main-content {
-  padding-top:146px + 20px !important;
+  padding-top:212px !important;
   overflow-y:scroll;
-  height:96vh;
+  height:101vh;
   background:$lightgrey;
   padding:20px;
   h1,h2,h3,h4,h5,h6 {
@@ -734,12 +795,12 @@ Main Content
     padding:30px 60px;
   }
 
-  //each block within main content div
+  //each white rounded block within main content div
   section {
     background:$white;
     border-radius:4px;
     padding:20px;
-    margin-bottom:20px;
+    margin-bottom:30px;
     @include media-breakpoint-up(md) {
       padding:30px;
     }
@@ -758,20 +819,27 @@ section.card-info {
 
 .card-info {
   &:after {
-    background-size:25px;
+    background-size:cover !important;
     content:"";
     display:block;
     position:absolute;
     top:20px;
     right:20px;
-    height: 25px;
-    width: 25px;
+    height: 32px;
+    width: 32px;
   }
 }
 
 .card-info.icon-twitter {
   &:after {
     background:url(../img/ico-twitter.svg) no-repeat center center;
+  }
+}
+
+.card-info.icon-avatar {
+  &:after {
+    background:url(../img/avatar.jpg) no-repeat center center;
+    border-radius:50%;
   }
 }
 
@@ -994,6 +1062,15 @@ section.history {
 
 }
 
+//horizontal tabs
+
+.tab-content-horizontal {
+  .card-info::after {
+    height:60px !important;
+    width:60px !important;
+  }
+}
+
 
 /* ==========================================================================
 forms
@@ -1016,6 +1093,150 @@ section form {
   }
 }
 
+//form inputs
+
+input[type=text], input[type=password], input[type=number], textarea {
+  background-color:$field_bg !important;
+}
+
+textarea {
+  min-height:140px;
+}
+
+
+/* ==========================================================================
+Data tables
+========================================================================== */
+
+//filter
+
+.btn-cog {
+  border:1px solid #816FA3;
+}
+
+.nav-bar-datatable {
+  border-radius:4px;
+
+  form.search {
+    position:relative;
+    &:before {
+      position:absolute;
+      content:'';
+      display:block;
+      height:25px;
+      width:25px;
+      background:url(../img/ico-filter.svg) no-repeat center center;
+      background-size:cover;
+      left: 20px;
+      top: 20px;
+      z-index: 999;
+    }
+  }
+
+  .datatable-search {
+    border-radius:4px;
+    position:relative;
+    padding-left: 55px;
+    border-right:1px solid $white !important;
+    height: 70px;
+    border-radius: 0;
+    border:0;
+    background:$primary;
+    color:$white;
+  }
+
+  .datatable-search::placeholder {
+    color:$white;
+  }
+
+
+  .dropdown-toggle {
+    padding: 23px 5px !important;
+    border-right: 0 !important;
+    background:$primary !important;
+  }
+
+  .dropdown-item {
+    padding:10px !important;
+  }
+
+  .dropdown-menu {
+    background:$white;
+    .dropdown-item {
+      color: $primary;
+    }
+    .dropdown-item:hover, .dropdown-item:focus {
+      color: $primary;
+      background-color: $white;
+    }
+  }
+
+
+}
+
+.dataTables_wrapper {
+    width:100%;
+    margin-bottom:40px;
+
+//table header
+    thead {
+        tr {
+          font-size:14px;
+          letter-spacing: 1px;
+        background: transparent !important;
+        th {
+          background: transparent;
+          font-weight:normal;
+          text-transform: uppercase;
+          color:$primary;
+          padding:5px 20px;
+        }
+
+      }
+    }
+
+//table body
+.dataTables_scrollBody {
+  background:transparent !important;
+      tr {
+        color:$primary;
+        background: $white;
+        border-top:2px solid #F7F3FF;
+        border-bottom:2px solid #F7F3FF;
+      }
+
+      td {
+        padding:5px 20px;
+      }
+  }
+
+    .custom-select {
+      background-color:transparent;
+    }
+
+    .page-link {
+      border:0;
+      background:transparent !important;
+    }
+
+    table.dataTable>thead .sorting:before, table.dataTable>thead .sorting:after, table.dataTable>thead .sorting_asc:before, table.dataTable>thead .sorting_asc:after, table.dataTable>thead .sorting_desc:before, table.dataTable>thead .sorting_desc:after, table.dataTable>thead .sorting_asc_disabled:before, table.dataTable>thead .sorting_asc_disabled:after, table.dataTable>thead .sorting_desc_disabled:before, table.dataTable>thead .sorting_desc_disabled:after {
+      bottom:3px !important;
+    }
+
+    .table-nav {
+      margin-top:20px;
+      color:$primary;
+    }
+
+}
+
+div.dataTables_wrapper div.dataTables_info {
+  padding-top:0 !important;
+}
+
+
+
+
 /* ==========================================================================
 Fixed Footer
 ========================================================================== */
@@ -1032,7 +1253,7 @@ ul.footer-values {
   li {
     display:inline-block;
     padding-right:15px;
-    span.value {
+    span.footer-value {
       background:$ui_3_light;
       padding:5px 10px;
       margin:0 15px 0 5px;
