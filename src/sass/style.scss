@@ -48,6 +48,7 @@ $spacers: map-merge(
 }
 
 .btn-outline-secondary {
+  height:44px;
   color:$secondary !important;
   &:hover {
     color:$white !important;
@@ -162,6 +163,10 @@ $breadcrumb-bg:                     transparent;
   padding: 0px 20px !important;
   margin-top: 4px;
 }
+
+//modals
+
+$modal-sm:                          340px;
 
 // Buttons + Forms
 //
@@ -708,7 +713,7 @@ Sidebar
 ========================================================================== */
 
 .col-sidebar {
-  padding:138px 0 0 0;
+  padding:130px 0 0 0;
   .inner {
     padding:10px 20px;
   }
@@ -716,7 +721,7 @@ Sidebar
 
 .sidebar-cards {
   overflow-y:scroll;
-  height:75.5vh;
+  height:70.5vh;
 
   li {
     padding:15px 20px;
@@ -752,25 +757,40 @@ Sidebar
  *  custom scrollbars
  */
 
-.scroll-style-1::-webkit-scrollbar-track
-{
+.scroll-style-1::-webkit-scrollbar-track {
 	background-color: #F7F3FF;
 }
 
-.scroll-style-1::-webkit-scrollbar
-{
+.scroll-style-1::-webkit-scrollbar {
 	width: 8px;
   border-radius: 5px;
 	background-color: #fff;
 }
 
-.scroll-style-1::-webkit-scrollbar-thumb
-{
-
+.scroll-style-1::-webkit-scrollbar-thumb {
 	background-color:  $primary;
 	border: 2px solid  $primary;
   border-radius:8px;
 }
+
+
+.dataTables_scrollBody::-webkit-scrollbar-track {
+	background-color: #F7F3FF;
+}
+
+
+.dataTables_scrollBody::-webkit-scrollbar {
+	width: 8px;
+  border-radius: 5px;
+	background-color: #fff;
+}
+
+.dataTables_scrollBody::-webkit-scrollbar-thumb {
+	background-color:  $primary;
+	border: 2px solid  $primary;
+  border-radius:8px;
+}
+
 
 
 /* ==========================================================================
@@ -778,9 +798,9 @@ Main Content
 ========================================================================== */
 
 .col-main-content {
-  padding-top:212px !important;
+  padding-top:160px !important;
   overflow-y:scroll;
-  height:101vh;
+  height:98vh;
   background:$lightgrey;
   padding:20px;
   h1,h2,h3,h4,h5,h6 {
@@ -1154,6 +1174,12 @@ Data tables
     padding: 23px 5px !important;
     border-right: 0 !important;
     background:$primary !important;
+    @include media-breakpoint-up(md) {
+      font-size: 12px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 14px;
+    }
   }
 
   .dropdown-item {
@@ -1164,6 +1190,7 @@ Data tables
     background:$white;
     .dropdown-item {
       color: $primary;
+
     }
     .dropdown-item:hover, .dropdown-item:focus {
       color: $primary;
@@ -1234,8 +1261,40 @@ div.dataTables_wrapper div.dataTables_info {
   padding-top:0 !important;
 }
 
+/* ==========================================================================
+Modals
+========================================================================== */
 
+.modal-content {
+  border-radius:0;
+}
 
+.modal-filter {
+  max-width: 380px;
+  left: auto;
+  right: -20px;
+  top: 42px;
+  .modal-header {
+    border:0;
+    padding:1.2rem 1rem 0 1.8rem;
+  }
+  .modal-body {
+    padding:1rem 1rem 1.8rem 1.8rem;
+    p {
+      color:$primary;
+    }
+    hr {
+      margin:20px 0;
+    }
+  }
+}
+
+.close {
+  color:$primary;
+  font-size:2rem;
+  opacity:1;
+  font-weight: 200;
+}
 
 /* ==========================================================================
 Fixed Footer
