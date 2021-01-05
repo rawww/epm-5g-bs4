@@ -112,6 +112,14 @@ $spacers: map-merge(
    }
 }
 
+.dropdown-menu-save-close {
+  background:$white !important;
+  .dropdown-item {
+      padding:20px !important;
+      color:#212529;
+  }
+}
+
 //add symbol
 
 .symbol-add {
@@ -503,6 +511,20 @@ mobile overlay
 Navigation
 ========================================================================== */
 
+.nav-filter-dropdowns {
+  display:none;
+  @media (min-width:1260px) {
+    display:flex;
+  }
+}
+
+.btn-filter-by {
+  display:none;
+  @media (max-width:1259px) {
+    display:block;
+  }
+}
+
 .dropdown-toggle::after {
     border: 0 !important;
     content:'';
@@ -567,8 +589,8 @@ Navigation
   .alert-dot-white-border {
     position:relative;
     &:after {
-      top: 20px;
-      right: 29px;
+      top: 0;
+      right: 0;
       border: 2px solid $white;
     }
   }
@@ -700,6 +722,18 @@ nav.navbar {
       border-top: 4px solid #553D84;
       margin-right: 5px;
 
+
+      &:focus {
+        background:#553D84;
+        border-top: 4px solid #553D84;
+      }
+      &:hover {
+        background:$white;
+        color:$primary;
+        border-top: 4px solid $white;
+      }
+
+
       @include media-breakpoint-up(lg) {
         padding:15px 40px 15px 20px;
         font-size:16px;
@@ -708,11 +742,6 @@ nav.navbar {
       padding: 18px 40px 18px 10px;
       font-size:10px;
 
-      &:hover {
-        background:$white;
-        color:$primary;
-        border-top: 4px solid $white;
-      }
       img {
         position:absolute;
         top: 16px;
@@ -1239,6 +1268,21 @@ textarea {
 }
 
 
+// map section
+
+section.map {
+  padding-left:0;
+  padding-right:0;
+  padding-bottom:0;
+}
+
+input.input-search {
+    background:url(../img/ico-search.svg) no-repeat center right;
+    background-size:40px;
+    padding-right:60px;
+}
+
+
 /* ==========================================================================
 Data tables
 ========================================================================== */
@@ -1301,7 +1345,7 @@ th.sorting_desc {
 
 //filter
 
-.btn-cog {
+.btn-filter {
   border:1px solid #816FA3;
   &:hover {
     background:$primary_dark;
@@ -1317,7 +1361,7 @@ th.sorting_desc {
 .nav-bar-datatable {
   border-radius:4px;
 
-  .btn-cog {
+  .btn-filter {
     margin-right:10px;
   }
 
@@ -1469,10 +1513,10 @@ Modals
   height:100%;
 }
 
-.modal-filter {
+.modal-right {
   max-width: 380px;
   left: auto;
-  right: -20px;
+  right: -28px;
   top: 42px;
   .modal-header {
     border:0;

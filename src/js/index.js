@@ -6,7 +6,7 @@ $(function () {
 
 //datatables
 
-$(document).ready(function() {  
+$(document).ready(function() {
     $('#example').DataTable( {
         "scrollY": 360,
         "scrollX": true,
@@ -21,4 +21,6 @@ $(document).ready(function() {
 $(function() {
     $( "#sortable" ).sortable();
     $( "#sortable" ).disableSelection();
+    $( "#sortable-filter-by" ).sortable();
+    $( "#sortable-filter-by" ).disableSelection();
 });
