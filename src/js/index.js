@@ -6,7 +6,7 @@ $(function () {
 
 //datatables
 
-$(document).ready(function() {
+$(document).ready(function() {  
     $('#example').DataTable( {
         "scrollY": 360,
         "scrollX": true,
