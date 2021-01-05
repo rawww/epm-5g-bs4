@@ -1,6 +1,10 @@
+//init bs4 tooltips
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+
+//datatables
 
 $(document).ready(function() {
     $('#example').DataTable( {
@@ -11,3 +15,10 @@ $(document).ready(function() {
         "pagingType": "simple"
     } );
 } );
+
+//jquery ui
+
+$(function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+});
