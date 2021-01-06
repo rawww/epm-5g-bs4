@@ -21,7 +21,9 @@ $hr: #CCD2D8;
 $ui_1: #76C987;
 $ui_2: #41BFB0;
 $ui_3: #E3C636;
-$ui_3_light: #F7EEC2 ;
+$ui_4: #E46457;
+$ui_3_light: #F7EEC2;
+
 
 $field_bg: #F8F8F8;
 
@@ -40,12 +42,44 @@ $spacers: map-merge(
   $spacers
 );
 
+.bg-ui-1 {
+  &:after {
+    background-color:$ui_1;
+  }
+}
+
+.bg-ui-2 {
+  &:after {
+    background-color:$ui_2;
+  }
+}
+
+.bg-ui-3 {
+  &:after {
+    background-color:$ui_3;
+  }
+}
+
+.bg-ui-4 {
+  &:after {
+    background-color:$ui_4;
+  }
+}
+
+.pl0 {
+  padding-left:0;
+}
+
+.pr0 {
+  padding-right:0;
+}
 
 // buttons
 
 .btn {
   color:$white !important;
   min-width:50px;
+  font-weight:300 !important;
 }
 
 .btn-outline-secondary {
@@ -61,6 +95,11 @@ $spacers: map-merge(
   &:hover {
     color:$white !important;
   }
+}
+
+.btn.wide {
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
 }
 
 
@@ -180,6 +219,8 @@ $breadcrumb-divider:                quote("");
 $breadcrumb-margin-bottom:          0;
 $breadcrumb-bg:                     transparent;
 
+
+
 .breadcrumb-item::before {
   text-indent:-9000px;
   background:url(../img/ico-breadcrumb-arrow.svg) no-repeat center center;
@@ -188,6 +229,14 @@ $breadcrumb-bg:                     transparent;
   width:20px;
   padding: 0px 20px !important;
   margin-top: 4px;
+}
+
+.breadcrumb a {
+    color:$primary !important;
+    &:hover {
+      color:$secondary !important;
+      text-decoration:none;
+    }
 }
 
 //modals
@@ -231,7 +280,7 @@ $nav-tabs-border-width:        0;
 //edit
 .nav-link.nav-link-edit {
   position:relative;
-  padding: 0.5rem 1rem 0.5rem 3rem !important;
+  padding: 0.5rem 2.5rem 0.5rem 4.5rem !important;
   &:before {
     position: absolute;
     content:"";
@@ -408,6 +457,10 @@ a, a:hover {
   color:$secondary !important;
 }
 
+.m-o {
+  margin:0;
+}
+
 /* ==========================================================================
 CSS animation
 ========================================================================== */
@@ -556,8 +609,7 @@ Navigation
     right: 3px;
     width: 12px;
     height: 12px;
-    border: 2px solid $black;
-    background: $ui_3;
+    border: 2px solid #322450;
     border-radius: 50%;
   }
 }
@@ -572,7 +624,6 @@ Navigation
     width: 12px;
     height: 12px;
     border: 2px solid $white;
-    background: $ui_3;
     border-radius: 50%;
   }
 }
@@ -583,7 +634,7 @@ Navigation
     &:after {
       top: 20px;
       right: 29px;
-      border: 2px solid $black;
+      border: 2px solid #322450;
     }
   }
   .alert-dot-white-border {
@@ -604,9 +655,12 @@ nav.navbar {
   }
 
   .dropdown-toggle-main {
+    min-height:76px;
     padding: 23px 20px !important;
-    //margin-right:20px;
-    border-right:1px solid $primary_light;
+    border-right:1px solid #5C4689;
+    &:hover {
+      background:$primary_dark;
+    }
   }
 
   .dropdown-item {
@@ -706,22 +760,22 @@ nav.navbar {
   }
 
   .nav-tabs {
-    margin-top: 13px;
+    margin-top: 20px;
     border-bottom:0;
     .nav-link.active {
       border-top-color: $ui_2;
-      border-top-width: 4px;
+      border-top-width: 6px;
       a {
         color:$primary;
       }
     }
     li a {
       position:relative;
-      padding:15px 40px 15px 20px;
       background:#553D84;
       border-top: 4px solid #553D84;
       margin-right: 5px;
-
+      padding: 18px 40px 18px 10px;
+      min-height: 56px;
 
       &:focus {
         background:#553D84;
@@ -735,18 +789,17 @@ nav.navbar {
 
 
       @include media-breakpoint-up(lg) {
-        padding:15px 40px 15px 20px;
+        padding:13px 40px 13px 20px;
         font-size:16px;
       }
 
-      padding: 18px 40px 18px 10px;
       font-size:10px;
 
       img {
         position:absolute;
         top: 16px;
         @include media-breakpoint-up(lg) {
-          top: 18px;
+          top: 16px;
         }
         right: 11px;
       }
@@ -762,7 +815,8 @@ nav.navbar.nav-secondary {
     .nav-item {
       border:1px solid $primary_light;
       border-radius:4px;
-      padding: 20px;
+      height: 40px;
+      width: 42px;
       margin-right: 10px;
       display: inline-block;
       &:hover {
@@ -771,13 +825,13 @@ nav.navbar.nav-secondary {
     }
 
     .nav-item.active {
-      background-color:$ui_2;
+      background-color:$primary;
     }
 
     .nav-item-1 {
       background:url(../img/ico-3dot-inactive.svg) no-repeat center center;
       &:hover {
-        background:url(../img/ico-3dot-active.svg) no-repeat center center $primary_dark;
+        background:url(../img/ico-3dot-active.svg) no-repeat center center $ui_2;
       }
     }
     .nav-item-1.active {
@@ -787,7 +841,7 @@ nav.navbar.nav-secondary {
     .nav-item-2 {
       background:url(../img/ico-person-inactive.svg) no-repeat center center;
       &:hover {
-        background:url(../img/ico-person-active.svg) no-repeat center center $primary_dark;
+        background:url(../img/ico-person-active.svg) no-repeat center center $ui_2;
       }
     }
 
@@ -798,7 +852,7 @@ nav.navbar.nav-secondary {
     .nav-item-3 {
       background:url(../img/ico-edit-inactive.svg) no-repeat center center;
       &:hover {
-        background:url(../img/ico-edit-active.svg) no-repeat center center $primary_dark;
+        background:url(../img/ico-edit-active.svg) no-repeat center center $ui_2;
       }
     }
 
@@ -809,7 +863,7 @@ nav.navbar.nav-secondary {
     .nav-item-4 {
       background:url(../img/ico-history-inactive.svg) no-repeat center center;
       &:hover {
-        background:url(../img/ico-history-active.svg) no-repeat center center $primary_dark;
+        background:url(../img/ico-history-active.svg) no-repeat center center $ui_2;
       }
     }
 
@@ -820,7 +874,7 @@ nav.navbar.nav-secondary {
     .nav-item-5 {
       background:url(../img/ico-docs-inactive.svg) no-repeat center center;
       &:hover {
-        background:url(../img/ico-docs-active.svg) no-repeat center center $primary_dark;
+        background:url(../img/ico-docs-active.svg) no-repeat center center $ui_2;
       }
     }
 
@@ -831,7 +885,7 @@ nav.navbar.nav-secondary {
     .nav-item-6 {
       background:url(../img/ico-map-inactive.svg) no-repeat center center;
       &:hover {
-        background:url(../img/ico-map-active.svg) no-repeat center center $primary_dark;
+        background:url(../img/ico-map-active.svg) no-repeat center center $ui_2;
       }
     }
 
@@ -842,7 +896,7 @@ nav.navbar.nav-secondary {
     .nav-item-7 {
       background:url(../img/ico-graph-inactive.svg) no-repeat center center;
       &:hover {
-        background:url(../img/ico-graph-active.svg) no-repeat center center $primary_dark;
+        background:url(../img/ico-graph-active.svg) no-repeat center center $ui_2;
       }
     }
 
@@ -856,9 +910,10 @@ Sidebar
 ========================================================================== */
 
 .col-sidebar {
-  padding:130px 0 0 0;
+  padding:135px 0 0 0; 
   .inner {
     padding:10px 20px;
+    color:$primary;
   }
 }
 
@@ -870,27 +925,27 @@ Sidebar
     padding:15px 20px;
     border-bottom:1px solid $darkgrey;
     position:relative;
-      &:hover {
 
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 38px;
+      right: 40px;
+      width: 20px;
+      height: 20px;
+      background:url(../img/ico-close-tab-2.svg) no-repeat center center;
+    }
+
+      &:hover {
+        cursor:pointer;
         .inner {
-          border-left-width: 8px;
+          border-left-width: 6px;
           border-left-style: solid;
           border-left-color: $ui_2;
-          border-radius: 8px;
+          border-radius: 6px;
           padding:10px 20px 10px 12px;
           background:$primary_lighter;
-        }
-
-        cursor:pointer;
-        &:after {
-          content: "";
-          display: block;
-          position: absolute;
-          top: 38px;
-          right: 40px;
-          width: 20px;
-          height: 20px;
-          background:url(../img/ico-close-tab-2.svg) no-repeat center center;
         }
     }
   }
@@ -1008,10 +1063,10 @@ section.card-info {
 }
 
 .card-info.color-primary {
-  border-left-width: 5px;
+  border-left-width: 6px;
   border-left-style: solid;
   border-left-color: $primary;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .card-info.color-secondary {
@@ -1188,6 +1243,9 @@ section.history {
     border-radius:6px;
     border: 1px solid $lightgrey;
     position:relative;
+    &:hover {
+      background:$lightgrey;
+    }
     &:before {
       background-size:cover !important;
       content:"";
@@ -1257,7 +1315,7 @@ section form {
   }
 }
 
-//form inputs
+//top level form inputs
 
 input[type=text], input[type=password], input[type=number], textarea, select {
   background-color:$field_bg !important;
@@ -1267,13 +1325,17 @@ textarea {
   min-height:140px;
 }
 
+select {
+  background:url(../img/ico-select.svg) no-repeat center right;
+  background-size:25px;
+  -webkit-appearance: none;
+}
+
 
 // map section
 
 section.map {
-  padding-left:0;
-  padding-right:0;
-  padding-bottom:0;
+  padding:17px 0 0 0;
 }
 
 input.input-search {
@@ -1286,6 +1348,14 @@ input.input-search {
 /* ==========================================================================
 Data tables
 ========================================================================== */
+
+.open {
+  color:#45B374;
+}
+
+.closed {
+  color:#E0655A;
+}
 
 //sort icons
 
@@ -1389,9 +1459,16 @@ th.sorting_desc {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
     position:relative;
     padding-left: 55px;
-    border-right:1px solid $white !important;
+    border-right:1px solid #5C4689 !important;
     height: 60px;
     border:0;
     background:$primary;
@@ -1475,13 +1552,13 @@ th.sorting_desc {
       }
 
       td {
-        padding:5px 20px;
+        padding:5px 20px 3px 20px;
+        font-size: 15px;
+        font-weight:400;
       }
   }
 
-    .custom-select {
-      background-color:transparent;
-    }
+
 
     .page-link {
       border:0;
@@ -1504,6 +1581,23 @@ div.dataTables_wrapper div.dataTables_info {
   padding-top:0 !important;
 }
 
+
+.dataTables_paginate li a {
+  text-transform: uppercase;
+  letter-spacing:1px;
+  font-size:12px;
+  color:$secondary;
+}
+
+
+
+.custom-select {
+  background-color:transparent !important;
+  -webkit-appearance: none;
+}
+
+
+
 /* ==========================================================================
 Modals
 ========================================================================== */
@@ -1513,22 +1607,44 @@ Modals
   height:100%;
 }
 
+.modal-open .modal-right {
+    overflow-y: hidden !important;
+}
+
 .modal-right {
+  overflow-y: hidden;
   max-width: 380px;
   left: auto;
   right: -28px;
-  top: 42px;
+  top: 47px;
   .modal-header {
+    color:$primary;
     border:0;
     padding:1.2rem 1.8rem 0 1.8rem;
   }
   .modal-body {
+    min-height:1280px;
     padding:1rem 1.8rem 1.8rem 1.8rem;
     p {
       color:$primary;
     }
     hr {
       margin:20px 0;
+    }
+  }
+
+  .ui-sortable-handle {
+    background:$white;
+    padding:8px;
+    border-radius:4px;
+    z-index: 999999;
+    &:hover {
+      @include fade-all;
+      position:relative;
+      z-index: 999999;
+      -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+      box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
     }
   }
 }

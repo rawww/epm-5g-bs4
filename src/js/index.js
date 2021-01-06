@@ -8,7 +8,7 @@ $(function () {
 
 $(document).ready(function() {
     $('#example').DataTable( {
-        "scrollY": 360,
+        "scrollY": 305,
         "scrollX": true,
         "searching": true,
         "dom": '<<t><"row table-nav"<"col-md-4"i><"col-md-4"l><"col-md-4"p>>>',
