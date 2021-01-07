@@ -7,12 +7,14 @@ $primary_light: #DDD8E6;
 $primary_lighter: #F2F5F8;
 $primary_dark: #322450;
 
-$secondary:     #76C987;
+$secondary:#76C987;
 
 
 $white: #ffffff;
 $darkgrey: #DDD8E6;
 $lightgrey: #F3F3F3;
+$lightergrey: #F9f9f9;
+
 $black: #000;
 $offblack: #3c3c3c;
 
@@ -26,6 +28,23 @@ $ui_3_light: #F7EEC2;
 
 
 $field_bg: #F8F8F8;
+
+/* ==========================================================================
+Mixins
+========================================================================== */
+
+@mixin fade-all() {
+	transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+
+@mixin shadow() {
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+}
 
 $spacer: 1rem !default;
 $spacers: () !default;
@@ -152,10 +171,23 @@ $spacers: map-merge(
 }
 
 .dropdown-menu-save-close {
+  @include shadow;
+  border:0 !important;
   background:$white !important;
+  top:125% !important;
+  left: -83px !important;
+  border-radius:4px !important;
   .dropdown-item {
-      padding:20px !important;
-      color:#212529;
+      padding:8px 10px !important;
+      color:$primary;
+      border-bottom:1px solid #d8d8d8;
+      &:hover {
+        background:$lightergrey;
+        color:$primary;
+      }
+  }
+  .dropdown-item:last-of-type {
+    border:0;
   }
 }
 
@@ -208,8 +240,8 @@ $dropdown-link-hover-color:         $white;
 $dropdown-item-padding-y:           1rem !default;
 $dropdown-item-padding-x:           1.5rem !default;
 
-.dropdown-menu {
-    top: 97% !important;
+.dropdown-menu.top {
+    top: 97%;
     left: -1px !important;
 }
 
@@ -237,6 +269,15 @@ $breadcrumb-bg:                     transparent;
       color:$secondary !important;
       text-decoration:none;
     }
+}
+
+.breadcrumb-item.home a {
+  background:url(../img/ico-breadcrumb-home.svg) no-repeat center center;
+  background-size:contain;
+  width:24px;
+  &:hover {
+    background-image:url(../img/ico-breadcrumb-home-hover.svg);
+  }
 }
 
 //modals
@@ -272,6 +313,7 @@ $nav-tabs-border-width:        0;
     background:transparent !important;
     color:$primary !important;
     border: 1px solid $darkgrey !important;
+    padding:0.4rem 1rem 0.5rem 1rem;;
   }
 }
 
@@ -317,6 +359,12 @@ mixins
 /* ==========================================================================
 Custom Helpers
 ========================================================================== */
+
+.museo-sans-rounded {
+  font-family: museo-sans-rounded, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
 a, a:hover {
   @include fade-all;
@@ -440,13 +488,17 @@ a, a:hover {
   vertical-align: middle !important;
 }
 
+
 .value {
   background: #F7EEC2;
   color:$primary !important;
-  padding: 3px 8px;
-  margin: 0 0 0 12px;
+  padding: 3px 6px;
+  margin-left:15px;
   border-radius: 15px;
   font-size: 12px;
+  font-family: museo-sans-rounded, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .primary {
@@ -486,17 +538,6 @@ Custom gutters
   padding-right:15px;
 }
 
-
-/* ==========================================================================
-Mixins
-========================================================================== */
-
-@mixin fade-all() {
-	transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-}
 
 /* ==========================================================================
 High level selectors
@@ -587,8 +628,8 @@ Navigation
     background:url(../img/ico-dropdown-white.svg) no-repeat;
     background-size:contain;
     position:absolute;
-    top:22px;
-    right:3px;
+    top:27px;
+    right:8px;
 }
 
 
@@ -772,7 +813,7 @@ nav.navbar {
     li a {
       position:relative;
       background:#553D84;
-      border-top: 4px solid #553D84;
+      border-top: 4px solid $primary;
       margin-right: 5px;
       padding: 18px 40px 18px 10px;
       min-height: 56px;
@@ -784,7 +825,7 @@ nav.navbar {
       &:hover {
         background:$white;
         color:$primary;
-        border-top: 4px solid $white;
+        border-top: 4px solid $primary;
       }
 
 
@@ -811,6 +852,14 @@ nav.navbar {
 nav.navbar.nav-secondary {
     border-bottom:1px solid $primary_light;
     padding:5px 15px;
+
+    .nav-item.text {
+      width:auto;
+      background: #41BFB0 !important;
+      color: #ffffff !important;
+      border: 1px solid #41BFB0 !important;
+      padding: 0.4rem 1rem 0.5rem 1rem;
+    }
 
     .nav-item {
       border:1px solid $primary_light;
@@ -910,7 +959,7 @@ Sidebar
 ========================================================================== */
 
 .col-sidebar {
-  padding:135px 0 0 0; 
+  padding:135px 0 0 0;
   .inner {
     padding:10px 20px;
     color:$primary;
@@ -919,7 +968,8 @@ Sidebar
 
 .sidebar-cards {
   overflow-y:scroll;
-  height:70.5vh;
+  height:78.5vh;
+  padding-bottom:54px;
 
   li {
     padding:15px 20px;
@@ -1331,6 +1381,16 @@ select {
   -webkit-appearance: none;
 }
 
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
 
 // map section
 
@@ -1473,6 +1533,11 @@ th.sorting_desc {
     border:0;
     background:$primary;
     color:$white;
+    &:hover, &:focus {
+      @include fade-all;
+      background:#322450;
+    }
+
   }
 
   .datatable-search::placeholder {
@@ -1481,9 +1546,12 @@ th.sorting_desc {
 
 
   .dropdown-toggle {
-    padding: 15px 25px 15px 10px !important;
+    padding: 19.5px 30px 19.5px 10px !important;
     border-right: 0 !important;
     background:$primary !important;
+    &:hover {
+      background:#322450 !important;
+    }
     @include media-breakpoint-up(md) {
       font-size: 12px;
     }
@@ -1497,6 +1565,8 @@ th.sorting_desc {
     padding:10px !important;
     label {
       margin:0;
+      display:block;
+      cursor:pointer;
     }
     input[type='checkbox'] {
       border-radius:3px;
@@ -1514,7 +1584,8 @@ th.sorting_desc {
     }
     .dropdown-item:hover, .dropdown-item:focus {
       color: $primary;
-      background-color: $white;
+      background-color: $lightergrey;
+      cursor:pointer;
     }
   }
 
@@ -1552,7 +1623,7 @@ th.sorting_desc {
       }
 
       td {
-        padding:5px 20px 3px 20px;
+        padding:7px 20px 5px 20px;
         font-size: 15px;
         font-weight:400;
       }
@@ -1670,6 +1741,7 @@ Fixed Footer
 
 ul.footer-values {
   li {
+    color:$primary;
     display:inline-block;
     padding:0 15px 15px 0;
     span.footer-value {
@@ -1677,6 +1749,9 @@ ul.footer-values {
       padding:5px 10px;
       margin:0 15px 0 5px;
       border-radius:15px;
+      font-family: museo-sans-rounded, sans-serif;
+      font-weight: 700;
+      font-style: normal;
     }
   }
 }

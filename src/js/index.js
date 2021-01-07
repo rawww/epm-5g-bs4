@@ -12,7 +12,10 @@ $(document).ready(function() {
         "scrollX": true,
         "searching": true,
         "dom": '<<t><"row table-nav"<"col-md-4"i><"col-md-4"l><"col-md-4"p>>>',
-        "pagingType": "simple"
+        "pagingType": "simple",
+        "infoCallback": function( settings, start, end, max, total, pre ) {
+  return "Displaying " + "<b>" + start + "</b>" + " of <b>"+ end + " entries</b>";
+},
     } );
 } );
 
