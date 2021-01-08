@@ -34,10 +34,17 @@ Mixins
 ========================================================================== */
 
 @mixin fade-all() {
-	transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+
+@mixin fade-padding() {
+	transition: padding 0.3s;
+	-moz-transition: padding 0.3s;
+	-webkit-transition: padding 0.3s;
+	-o-transition: padding 0.3s;
 }
 
 @mixin shadow() {
@@ -217,7 +224,7 @@ $tooltip-padding-x:                 1rem !default;
 
 .bs-tooltip-bottom {
   margin-top:5px !important;
-
+  opacity:1 !important;
 }
 
 .tooltip-inner {
@@ -543,9 +550,6 @@ Custom gutters
 High level selectors
 ========================================================================== */
 
-a {
-  @include fade-all;
-}
 
 //bottom body spacing for fixed footer
 
@@ -693,6 +697,9 @@ nav.navbar {
   background:$primary;
   a {
     color:$white;
+    &:hover {
+      text-decoration:none !important;
+    }
   }
 
   .dropdown-toggle-main {
@@ -777,9 +784,11 @@ nav.navbar {
       padding:21px 30px;
       display:block;
       border-left:1px solid #5C4689;
+      min-height: 74px;
     }
     .nav-item {
       &:hover {
+        @include fade-all;
         background:$primary_dark;
       }
     }
@@ -855,10 +864,14 @@ nav.navbar.nav-secondary {
 
     .nav-item.text {
       width:auto;
-      background: #41BFB0 !important;
+      background: $ui_2 !important;
       color: #ffffff !important;
-      border: 1px solid #41BFB0 !important;
+      border: 1px solid $ui_2 !important;
       padding: 0.4rem 1rem 0.5rem 1rem;
+      &:hover {
+        @include fade-all;
+        background: darken($ui_2, 5%) !important;
+      }
     }
 
     .nav-item {
@@ -870,6 +883,7 @@ nav.navbar.nav-secondary {
       display: inline-block;
       &:hover {
         cursor:pointer;
+        @include fade-all;
       }
     }
 
@@ -990,6 +1004,7 @@ Sidebar
       &:hover {
         cursor:pointer;
         .inner {
+          @include fade-padding;
           border-left-width: 6px;
           border-left-style: solid;
           border-left-color: $ui_2;
@@ -1607,6 +1622,7 @@ th.sorting_desc {
           text-transform: uppercase;
           color:$primary;
           padding:5px 20px;
+          font-size:12px;
         }
 
       }
