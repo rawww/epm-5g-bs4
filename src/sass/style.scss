@@ -11,9 +11,9 @@ $secondary:#76C987;
 
 
 $white: #ffffff;
-$darkgrey: #DDD8E6;
-$lightgrey: #F3F3F3;
-$lightergrey: #F9f9f9;
+$grey_dark: #DDD8E6;
+$grey_light: #F3F3F3;
+$grey_lighter: #F9f9f9;
 
 $black: #000;
 $offblack: #3c3c3c;
@@ -24,8 +24,8 @@ $ui_1: #76C987;
 $ui_2: #41BFB0;
 $ui_3: #E3C636;
 $ui_4: #E46457;
-$ui_3_light: #F7EEC2;
 
+$ui_3_light: #F7EEC2;
 
 $field_bg: #F8F8F8;
 
@@ -189,7 +189,7 @@ $spacers: map-merge(
       color:$primary;
       border-bottom:1px solid #d8d8d8;
       &:hover {
-        background:$lightergrey;
+        background:$grey_lighter;
         color:$primary;
       }
   }
@@ -219,7 +219,7 @@ $spacers: map-merge(
 // Tooltips
 
 $tooltip-bg:                        $primary;
-$tooltip-padding-y:                 .25rem !default;
+$tooltip-padding-y:                 .25rem  !default;
 $tooltip-padding-x:                 1rem !default;
 
 .bs-tooltip-bottom {
@@ -319,7 +319,7 @@ $nav-tabs-border-width:        0;
     border-radius: 0.25rem !important;
     background:transparent !important;
     color:$primary !important;
-    border: 1px solid $darkgrey !important;
+    border: 1px solid $grey_dark !important;
     padding:0.4rem 1rem 0.5rem 1rem;;
   }
 }
@@ -360,6 +360,9 @@ mixins
 	-o-transition: all 0.7s;
 }
 
+/* ==========================================================================
+sass imports
+========================================================================== */
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
@@ -426,40 +429,40 @@ a, a:hover {
 }
 
 .border-bottom-light-grey {
-  border-bottom:1px solid $lightgrey;
+  border-bottom:1px solid $grey_light;
 }
 
 .border-bottom-dark-grey {
-  border-bottom:1px solid $darkgrey;
+  border-bottom:1px solid $grey_dark;
 }
 
 .border-top-light-grey {
-  border-top:1px solid $lightgrey;
+  border-top:1px solid $grey_light;
 }
 
 .border-top-dark-grey {
-  border-top:1px solid $darkgrey;
+  border-top:1px solid $grey_dark;
 }
 
 
 .border-right-light-grey {
-  border-right:1px solid $lightgrey;
+  border-right:1px solid $grey_light;
 }
 
 .border-left-dark-grey {
-  border-left:1px solid $darkgrey;
+  border-left:1px solid $grey_dark;
 }
 
 .border-right-light-grey {
-  border-right:1px solid $lightgrey;
+  border-right:1px solid $grey_light;
 }
 
 .border-right-dark-grey {
-  border-right:1px solid $darkgrey;
+  border-right:1px solid $grey_dark;
 }
 
 .border-grey {
-  border-color:$darkgrey;
+  border-color:$grey_dark;
 }
 
 
@@ -987,7 +990,7 @@ Sidebar
 
   li {
     padding:15px 20px;
-    border-bottom:1px solid $darkgrey;
+    border-bottom:1px solid $grey_dark;
     position:relative;
 
     &:after {
@@ -1025,9 +1028,17 @@ Sidebar
 }
 
 .scroll-style-1::-webkit-scrollbar {
-	width: 8px;
+	@include fade-all;
+
+	position:absolute;
+	width: 5px;
   border-radius: 5px;
 	background-color: #fff;
+}
+
+.scroll-style-1:hover::-webkit-scrollbar {
+	@include fade-all;
+  width: 10px;
 }
 
 .scroll-style-1::-webkit-scrollbar-thumb {
@@ -1036,6 +1047,7 @@ Sidebar
   border-radius:8px;
 }
 
+//scrollbars in data tables
 
 .dataTables_scrollBody::-webkit-scrollbar-track {
 	background-color: #F7F3FF;
@@ -1065,7 +1077,7 @@ Main Content
   padding-top:160px !important;
   overflow-y:scroll;
   height:98vh;
-  background:$lightgrey;
+  background:$grey_light;
   padding:20px;
   h1,h2,h3,h4,h5,h6 {
     color:$primary;
@@ -1207,7 +1219,7 @@ section.card-info {
    li {
     padding:20px 20px 20px 42px;
     color:$primary;
-    border-top:1px solid $darkgrey;
+    border-top:1px solid $grey_dark;
     position:relative;
     &:before {
         position:absolute;
@@ -1306,10 +1318,10 @@ section.history {
   }
   .nav-link {
     border-radius:6px;
-    border: 1px solid $lightgrey;
+    border: 1px solid $grey_light;
     position:relative;
     &:hover {
-      background:$lightgrey;
+      background:$grey_light;
     }
     &:before {
       background-size:cover !important;
@@ -1339,7 +1351,7 @@ section.history {
         border-left-width: 6px;
         border-left-style: solid;
         border-left-color: $ui_2;
-        background:$lightgrey;
+        background:$grey_light;
   }
   p {
     margin-bottom:0;
@@ -1599,7 +1611,7 @@ th.sorting_desc {
     }
     .dropdown-item:hover, .dropdown-item:focus {
       color: $primary;
-      background-color: $lightergrey;
+      background-color: $grey_lighter;
       cursor:pointer;
     }
   }
