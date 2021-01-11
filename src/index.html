@@ -3,7 +3,10 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-3 col-sm-12 col-sidebar pr">
-      <div class="close-sidebar hover-pointer"><img alt="" src="img/ico-close-tab-2.svg"></div>
+      <div class="close-sidebar hover-pointer">
+        <img class="close-sidebar-icon show" alt="close sidebar" src="img/ico-side-bar-close.svg">
+        <img class="open-sidebar-icon" alt="open sidebar" src="img/ico-side-bar-open.svg">
+      </div>
       <div class="inner border-bottom-dark-grey">
         <button type="button" class="btn ct btn-add width-100 btn-secondary">Add new Contact</button>
       </div>
@@ -522,6 +525,8 @@
       <!-- map block -->
 
 
+
+
       <!-- change history block -->
 
       <h2>Change History</h2>
@@ -870,48 +875,88 @@
 
       <!-- /links block -->
 
+      <!-- carousel state block -->
 
-      <!-- state block -->
+      <h2>State with navigation</h2>
 
-      <h2>State</h2>
+<section class="carousel-state pr">
 
-      <div class="row custom-gutter-1">
+      <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <section class="card-flow step icon-twitter swiper-slide">
+              <p><b>Contact recieved</b><br />
+                via twitter<br />
+                28/10/20 14:55</p>
+            </section>
 
-        <div class="col col-md-4 col-lg-4">
+            <section class="card-flow step icon-avatar swiper-slide">
+              <p><b>Contact recieved</b><br />
+                via twitter<br />
+                28/10/20 14:55</p>
+            </section>
 
-          <section class="card-flow step icon-twitter">
-            <p><b>Contact recieved</b><br />
-              via twitter<br />
-              28/10/20 14:55</p>
-          </section>
+            <section class="card-flow step icon-twitter swiper-slide">
+              <p><b>Contact recieved</b><br />
+                via twitter<br />
+                28/10/20 14:55</p>
+            </section>
 
+            <section class="card-flow step icon-avatar swiper-slide">
+              <p><b>Contact recieved</b><br />
+                via twitter<br />
+                28/10/20 14:55</p>
+            </section>
+
+            <section class="card-flow step icon-twitter swiper-slide">
+              <p><b>Contact recieved</b><br />
+                via twitter<br />
+                28/10/20 14:55</p>
+            </section>
+
+            <section class="card-flow step icon-avatar swiper-slide">
+              <p><b>Contact recieved</b><br />
+                via twitter<br />
+                28/10/20 14:55</p>
+            </section>
+
+            <section class="card-flow step icon-twitter swiper-slide">
+              <p><b>Contact recieved</b><br />
+                via twitter<br />
+                28/10/20 14:55</p>
+            </section>
+
+            <section class="card-flow step icon-avatar swiper-slide">
+              <p><b>Contact recieved</b><br />
+                via twitter<br />
+                28/10/20 14:55</p>
+            </section>
+
+            <section class="card-flow end icon-twitter swiper-slide">
+              <p><b>Contact recieved</b><br />
+                via twitter<br />
+                28/10/20 14:55</p>
+            </section>
+
+            <div class="swiper-slide">
+              <!-- end on a blank slide so the last has space to show it's status icon -->
+            </div>
         </div>
 
-        <div class="col col-md-4 col-lg-4">
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
 
-          <section class="card-flow step icon-avatar">
-            <p><b>Contact recieved</b><br />
-              via twitter<br />
-              28/10/20 14:55</p>
-          </section>
-
-        </div>
-
-        <div class="col col-md-4 col-lg-4">
-
-          <section class="card-flow end icon-twitter">
-            <p><b>Contact recieved</b><br />
-              via twitter<br />
-              28/10/20 14:55</p>
-          </section>
-
-        </div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 
 
-      </div>
+</section>
 
-      <!-- /state block -->
-
+<!-- / state carousel block -->
       <!-- notes block -->
 
       <h2>Notes</h2>
