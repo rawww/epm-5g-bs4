@@ -40,6 +40,13 @@ Mixins
 	-o-transition: all 0.2s;
 }
 
+@mixin no-animation() {
+	transition: all 0 !important;
+	-moz-transition: all 0 !important;
+	-webkit-transition: all 0 !important;
+	-o-transition: all 0 !important;
+}
+
 @mixin fade-padding() {
 	transition: padding 0.3s;
 	-moz-transition: padding 0.3s;
@@ -130,7 +137,7 @@ $spacers: map-merge(
 
 
 .btn.btn-dropdown {
- padding-right:50px;
+ padding-right:37px;
  position:relative;
  &:after {
    position:absolute;
@@ -329,7 +336,7 @@ $nav-tabs-border-width:        0;
 //edit
 .nav-link.nav-link-edit {
   position:relative;
-  padding: 0.5rem 2.5rem 0.5rem 4.5rem !important;
+  padding: 0.5rem 1rem 0.5rem 2.5rem !important;
   &:before {
     position: absolute;
     content:"";
@@ -424,6 +431,11 @@ a, a:hover {
   width:100%;
 }
 
+.flex-width-0 {
+	flex: 0 0 0 !important;
+	max-width: 0 !important;
+}
+
 .ct {
   text-align:center;
 }
@@ -503,7 +515,7 @@ a, a:hover {
   background: #F7EEC2;
   color:$primary !important;
   padding: 3px 6px;
-  margin-left:15px;
+  margin-left:6px;
   border-radius: 15px;
   font-size: 12px;
   font-family: museo-sans-rounded, sans-serif;
@@ -827,7 +839,7 @@ nav.navbar {
       background:#553D84;
       border-top: 4px solid $primary;
       margin-right: 5px;
-      padding: 18px 40px 18px 10px;
+      padding: 18px 32px 18px 10px;
       min-height: 56px;
 
       &:focus {
@@ -975,6 +987,21 @@ nav.navbar.nav-secondary {
 Sidebar
 ========================================================================== */
 
+.close-sidebar {
+		position: absolute;
+		margin-top:10px;
+    right: -39px;
+    z-index: 999;
+    background: #fff;
+    padding: 10px;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
 .col-sidebar {
   padding:135px 0 0 0;
   .inner {
@@ -985,8 +1012,8 @@ Sidebar
 
 .sidebar-cards {
   overflow-y:scroll;
-  height:78.5vh;
-  padding-bottom:54px;
+  height:82vh;
+  padding-bottom:83px;
 
   li {
     padding:15px 20px;
@@ -1028,20 +1055,23 @@ Sidebar
 }
 
 .scroll-style-1::-webkit-scrollbar {
-	@include fade-all;
-
 	position:absolute;
 	width: 5px;
   border-radius: 5px;
 	background-color: #fff;
 }
 
-.scroll-style-1:hover::-webkit-scrollbar {
-	@include fade-all;
-  width: 10px;
-}
+// .scroll-style-1:hover::-webkit-scrollbar {
+//   width: 10px;
+// }
 
 .scroll-style-1::-webkit-scrollbar-thumb {
+	background-color:  $primary_light;
+	border: 2px solid  $primary_light;
+  border-radius:8px;
+}
+
+.scroll-style-1:hover::-webkit-scrollbar-thumb {
 	background-color:  $primary;
 	border: 2px solid  $primary;
   border-radius:8px;
@@ -1062,6 +1092,12 @@ Sidebar
 }
 
 .dataTables_scrollBody::-webkit-scrollbar-thumb {
+	background-color:  $primary_light;
+	border: 2px solid  $primary_light;
+  border-radius:8px;
+}
+
+.dataTables_scrollBody:hover::-webkit-scrollbar-thumb {
 	background-color:  $primary;
 	border: 2px solid  $primary;
   border-radius:8px;
@@ -1074,9 +1110,9 @@ Main Content
 ========================================================================== */
 
 .col-main-content {
-  padding-top:160px !important;
+  margin-top:134px !important;
   overflow-y:scroll;
-  height:98vh;
+  height:85vh;
   background:$grey_light;
   padding:20px;
   h1,h2,h3,h4,h5,h6 {
@@ -1085,10 +1121,10 @@ Main Content
     font-weight:600;
   }
   p, li {
-    color:$offblack;
+    color:$primary;
   }
   @include media-breakpoint-up(lg) {
-    padding:30px 60px;
+    padding:30px 60px 55px 60px;
   }
 
   //each white rounded block within main content div
@@ -1192,8 +1228,8 @@ section.card-info {
   margin:0 15px 15px 0;
   border-radius:23px;
   background:#65508F;
-  padding:10px 40px 10px 20px;
-  min-width:100px;
+  padding:10px 38px 10px 20px;
+  min-width:84px;
   color:$white;
   &:after {
     content: "";
@@ -1322,6 +1358,7 @@ section.history {
     position:relative;
     &:hover {
       background:$grey_light;
+			border-left-color: $ui_2;
     }
     &:before {
       background-size:cover !important;
@@ -1392,7 +1429,9 @@ section form {
   }
 }
 
-//top level form inputs
+//top level form elements
+
+
 
 input[type=text], input[type=password], input[type=number], textarea, select {
   background-color:$field_bg !important;
@@ -1418,6 +1457,12 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 
+// validation
+
+.was-validated .form-control:invalid, .form-control.is-invalid, .was-validated .form-control:valid, .form-control.is-valid {
+	//moved more to the left to accommodate for chrome extensions injecting icons
+    background-position: right calc(0.375em + 0.9rem) center !important;
+}
 
 // map section
 
@@ -1436,6 +1481,10 @@ input.input-search {
 Data tables
 ========================================================================== */
 
+table.dataTable tbody {
+	@include fade-all;
+}
+
 .open {
   color:#45B374;
 }
@@ -1446,20 +1495,24 @@ Data tables
 
 //sort icons
 
+.dataTables_wrapper thead tr th {
+	vertical-align: top;
+}
+
 th.sorting {
   &:before {
     display:none !important;
   }
   &:after {
-    bottom: 10px !important;
+    top: 4px !important;
     right: 0 !important;
     opacity:1 !important;
     position:absolute;
     content:'' !important;
     display:block;
     background:url(../img/ico-table-sort.svg) no-repeat;
-    width: 18px;
-    height: 14px;
+    width: 20px;
+    height: 16px;
     background-size:contain;
   }
 }
@@ -1469,15 +1522,15 @@ th.sorting_asc {
     display:none !important;
   }
   &:after {
-    bottom: 10px !important;
+    top: 4px !important;
     right: 0 !important;
     opacity:1 !important;
     position:absolute;
     content:'' !important;
     display:block;
     background:url(../img/ico-table-sort-asc.svg) no-repeat;
-    width: 18px;
-    height: 14px;
+    width: 20px;
+    height: 16px;
     background-size:contain;
   }
 }
@@ -1487,15 +1540,15 @@ th.sorting_desc {
     display:none !important;
   }
   &:after {
-    bottom: 10px !important;
+    top: 4px !important;
     right: 0 !important;
     opacity:1 !important;
     position:absolute;
     content:'' !important;
     display:block;
     background:url(../img/ico-table-sort-desc.svg) no-repeat;
-    width: 18px;
-    height: 14px;
+    width: 20px;
+    height: 16px;
     background-size:contain;
   }
 }
@@ -1736,16 +1789,23 @@ Modals
     background:$white;
     padding:8px;
     border-radius:4px;
-    z-index: 999999;
-    &:hover {
-      @include fade-all;
-      position:relative;
-      z-index: 999999;
-      -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
-      -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
-      box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
-    }
   }
+	//when it is in a hover state
+	.ui-sortable-handle:hover {
+		position:relative;
+		z-index: 999;
+		-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+		-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+	}
+	//when it is in a dragged state
+	.ui-sortable-helper {
+		position:relative;
+		z-index: 999999;
+		-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+		-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+	}
 }
 
 .close {
