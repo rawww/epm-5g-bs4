@@ -1130,9 +1130,15 @@ Main Content
 ========================================================================== */
 
 .col-main-content {
-  margin-top:134px !important;
-  overflow-y:scroll;
-  height:85vh;
+  overflow-y: scroll;
+	margin: 134px 0 54px 0 !important;
+	height: 75vh;
+	@media (min-height:780px) {
+		height: 80vh;
+	}
+	@media (min-height:1000px) {
+	  height: 82vh;
+	}
   background:$grey_light;
   padding:20px;
   h1,h2,h3,h4,h5,h6 {
@@ -1144,7 +1150,7 @@ Main Content
     color:$primary;
   }
   @include media-breakpoint-up(lg) {
-    padding:30px 60px 55px 60px;
+    padding:30px 60px 30px 60px;
   }
 
   //each white rounded block within main content div
