@@ -209,6 +209,27 @@ $spacers: map-merge(
   }
 }
 
+.dropdown-menu-elipsis {
+	@include fade-all;
+  @include shadow;
+	margin-top:6px !important;
+  border:0 !important;
+  background:$white !important;
+  border-radius:4px !important;
+  .dropdown-item {
+      padding:8px 10px !important;
+      color:$primary;
+      border-bottom:1px solid #d8d8d8;
+      &:hover {
+        background:$grey_lighter;
+        color:$primary;
+      }
+  }
+  .dropdown-item:last-of-type {
+    border:0;
+  }
+}
+
 //add symbol
 
 .symbol-add {
@@ -1506,6 +1527,10 @@ input.input-search {
 /* ==========================================================================
 Data tables
 ========================================================================== */
+
+.table-ellipsis {
+	max-width:20px;
+}
 
 table.dataTable tbody {
 	@include fade-all;
