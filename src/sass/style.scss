@@ -210,7 +210,12 @@ $spacers: map-merge(
 }
 
 .dropdown-menu-elipsis {
-	@include fade-all;
+	animation: fadeIn ease 0.5s;
+	-webkit-animation: fadeIn ease 0.5s;
+	-moz-animation: fadeIn ease 0.5s;
+	-o-animation: fadeIn 0.5s;
+	-ms-animation: fadeIn 0.5s;
+	
   @include shadow;
 	margin-top:6px !important;
   border:0 !important;
@@ -229,6 +234,8 @@ $spacers: map-merge(
     border:0;
   }
 }
+
+
 
 //add symbol
 
@@ -401,6 +408,38 @@ sass imports
 /* ==========================================================================
 Custom Helpers
 ========================================================================== */
+
+.fade-in {
+animation: fadeIn ease 0.5s;
+-webkit-animation: fadeIn ease 0.5s;
+-moz-animation: fadeIn ease 0.5s;
+-o-animation: fadeIn 0.5s;
+-ms-animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
 
 .museo-sans-rounded {
   font-family: museo-sans-rounded, sans-serif;
