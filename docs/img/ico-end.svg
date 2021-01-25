@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="33px" height="33px" viewbox="0 0 33 33" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="Element-Circle-Icon" transform="translate(0.5 0.5)">
+    <g id="Element-Misc-Circle-Icon">
+      <path d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" id="Base" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+      <g clip-path="url(#mask_1)">
+        <g id="Oval" opacity="0.2484189">
+          <path d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" id="Oval" fill="#8AC44A" fill-rule="evenodd" stroke="none" />
+        </g>
+        <g id="Element-Icon-Message" transform="translate(11 12)">
+          <path d="M11.6682 2.03055L4.79977 9.25122C4.35741 9.71626 3.64127 9.71626 3.20004 9.25122L0.330921 6.23616C-0.110307 5.77112 -0.110307 5.01825 0.330921 4.55321C0.773281 4.08935 1.48943 4.08935 1.93066 4.55321L3.99991 6.72856L10.0685 0.348783C10.5097 -0.116261 11.2259 -0.116261 11.6682 0.348783C12.1106 0.812637 12.1106 1.56551 11.6682 2.03055" id="🎨-Icon-color" fill="#8AC44A" fill-rule="evenodd" stroke="#E3F1D3" stroke-width="1" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

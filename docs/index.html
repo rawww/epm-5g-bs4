@@ -1,2 +1,1884 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="css/style.css"><link rel="icon" href="./img/icon.png"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://use.typekit.net/uoo7ewl.css"><link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/datatables.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"><link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"><title>EPM 5g - v1</title></head><body><div class="mobile-warning ct"><svg class="svg-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="48" height="48"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg><br><br><h3>This application is best used on tablets in landscape orientation<br>or desktop computers</h3></div><!-- md down top nav --><nav class="navbar navbar-expand-md navbar-dark d-sm-flex d-md-none"><ul class="navbar-nav mr-auto"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle no-arrow" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img alt="" src="img/ico-hamburger.svg"></a></li></ul><a class="navbar-brand" href="#"><img alt="EPM" src="img/logo.svg"></a></nav><!-- / md down top nav --><!-- medium up top nav --><div class="fixed-top"><nav class="navbar navbar-expand-md navbar-dark d-none d-md-flex"><ul class="navbar-nav"><li class="nav-item dropdown mr-3"><a class="nav-link dropdown-toggle dropdown-toggle-main no-arrow" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img alt="" src="img/ico-hamburger.svg"></a><div class="dropdown-menu top" aria-labelledby="navbarDropdownMenuLink"><a class="dropdown-item icon-1" href="#">Accidents</a> <a class="dropdown-item icon-2" href="#">Customers</a> <a class="dropdown-item icon-3" href="#">Insights</a></div></li></ul><a class="navbar-brand" href="#"><img alt="EPM" src="img/logo.svg"></a><ul class="nav nav-tabs mr-auto"><li class="nav-item"><a class="nav-link active" href="#">Accidents <img alt="" src="img/ico-close-tab.svg"></a></li><li class="nav-item"><a class="nav-link" href="#">Customers <img alt="" src="img/ico-close-tab.svg"></a></li><li class="nav-item"><a class="nav-link" href="#">Insights <img alt="" src="img/ico-close-tab.svg"></a></li></ul><ul class="navbar-nav nav-right"><li class="nav-item alert-dot-black-border bg-ui-1"><a href="#"><img alt="" src="img/ico-alert.svg"></a></li><li class="nav-item alert-dot-black-border bg-ui-3"><a href="#"><img alt="" src="img/ico-star.svg"></a></li><li class="nav-item alert-dot-black-border bg-ui-4"><a href="#"><img alt="" src="img/ico-cog.svg"></a></li><li class="nav-item nav-avatar"><a href="#"><img class="rounded-circle" alt="" src="img/avatar.jpg"></a></li></ul></nav><!-- / large up top nav ends --><nav class="navbar nav-secondary bg-white navbar-expand-md navbar-dark d-none d-md-flex"><div class="mr-auto"><nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item home"><a href="#"></a></li><li class="breadcrumb-item" aria-current="page"><a href="#">Page</a></li><li class="breadcrumb-item" aria-current="page"><a href="#">Page</a></li></ol></nav></div><ul class="navbar-nav nav-secondary-right mr-4"><li class="nav-item text"><a href="#">All contacts <span class="value">30</span></a></li><li class="nav-item nav-item-1 active" data-toggle="tooltip" data-placement="bottom" title="Details"><a href="#"></a></li><li class="nav-item nav-item-2" data-toggle="tooltip" data-placement="bottom" title="Customer"><a href="#"></a></li><li class="nav-item nav-item-3" data-toggle="tooltip" data-placement="bottom" title="Notes"><a href="#"></a></li><li class="nav-item nav-item-4" data-toggle="tooltip" data-placement="bottom" title="History"><a href="#"></a></li><li class="nav-item nav-item-5 alert-dot-white-border bg-ui-1" data-toggle="tooltip" data-placement="bottom" title="Reports"><a href="#"></a></li><li class="nav-item nav-item-6 alert-dot-white-border bg-ui-3" data-toggle="tooltip" data-placement="bottom" title="Location"><a href="#"></a></li><li class="nav-item nav-item-7 alert-dot-white-border bg-ui-4" data-toggle="tooltip" data-placement="bottom" title="Data"><a href="#"></a></li></ul><div class="dropdown"><button class="btn btn-dropdown btn-secondary btn-save-close dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save & Close</button><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></nav></div><div class="container-fluid content-wrapper"><div class="row"><div class="col-md-3 col-sm-12 col-sidebar pr"><div class="close-sidebar hover-pointer"><img class="close-sidebar-icon show" alt="close sidebar" src="img/ico-side-bar-close.svg"> <img class="open-sidebar-icon" alt="open sidebar" src="img/ico-side-bar-open.svg"></div><div class="inner border-bottom-dark-grey"><button type="button" class="btn ct btn-add width-100 btn-secondary">Add new Contact</button></div><ul class="sidebar-cards no-list scroll-style-1"><li><div class="inner"><b>1262</b><br>Driver Behaviour</div></li><li><div class="inner"><b>1262</b><br>Driver Behaviour</div></li><li><div class="inner"><b>1262</b><br>Driver Behaviour</div></li><li><div class="inner"><b>1262</b><br>Driver Behaviour</div></li><li><div class="inner"><b>1262</b><br>Driver Behaviour</div></li><li><div class="inner"><b>1262</b><br>Driver Behaviour</div></li><li><div class="inner"><b>1262</b><br>Driver Behaviour</div></li><li><div class="inner"><b>1262</b><br>Driver Behaviour</div></li><li><div class="inner"><b>1262</b><br>Driver Behaviour</div></li><li><div class="inner"><b>1262 (third last)</b><br>Driver Behaviour</div></li><li><div class="inner"><b>1262 (second last)</b><br>Driver Behaviour</div></li><li><div class="inner"><b>1262 (last)</b><br>Driver Behaviour</div></li></ul></div><!-- main content div --><div class="col-md-9 col-sm-12 col-main-content scroll-style-1"><!-- data tables example --><nav class="navbar nav-bar-datatable navbar-expand-md mb-5"><div class="collapse navbar-collapse" id="navbarSupportedContent"><form class="search form-inline my-2 my-lg-0 mr-auto"><input class="form-control datatable-search" type="search" placeholder="Filter by Keyword" aria-label="Filter by Keyword"></form><ul class="navbar-nav nav-filter-dropdowns mr-2"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Date</a><div class="dropdown-menu shadow" aria-labelledby="navbarDropdown"><span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label></span> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label> </span><span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label></span></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Status</a><div class="dropdown-menu shadow" aria-labelledby="navbarDropdown"><span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label></span> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label> </span><span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label></span></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Depot</a><div class="dropdown-menu shadow" aria-labelledby="navbarDropdown"><span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label></span> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label> </span><span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label></span></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tags</a><div class="dropdown-menu shadow" aria-labelledby="navbarDropdown"><span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label></span> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label> </span><span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label></span></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Route</a><div class="dropdown-menu shadow" aria-labelledby="navbarDropdown"><span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label></span> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label> </span><span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label></span></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Allocation</a><div class="dropdown-menu shadow" aria-labelledby="navbarDropdown"><span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label></span> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label> </span><span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox">Label</label></span></div></li></ul></div><button class="btn btn-filter btn-filter-by" data-toggle="modal" data-target=".modal-filter-by">Filter by</button> <button class="btn btn-filter" data-toggle="modal" data-target=".modal-sort"><img alt="settings" src="img/ico-cog.svg"></button></nav><table id="example" class="display" style="width:100%"><thead><tr><th>Status</th><th>Date Opened</th><th>Contact ID</th><th>Customer</th><th>Category</th><th>More</th></tr></thead><tbody><tr><td class="closed">Closed</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>12 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Debbie Example</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="closed">Closed</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="closed">Closed</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr><tr><td class="open">Open</td><td>10 / 11 / 2020</td><td>34156</td><td>Paul Sample</td><td>Category name</td><td class="ct"><a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true" aria-expanded="false"></a><div class="dropdown-menu dropdown-menu-save-close" aria-labelledby="table-dropdown"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div><div class="dropdown"><a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="table-ellipsis" src="img/ico-ellipsis.svg"></a><div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"><a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a></div></div></td></tr></tbody></table><!-- / data tables example --><!-- map block --><h2>Map</h2><section class="map"><div class="row pb-3 justify-content-md-center"><div class="col-md-5"><input type="text" class="form-control input-search" placeholder="Search location"></div></div><div class="row"><div class="col-md-12"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155383.85487651697!2d-1.9018327442302951!3d52.51764223476423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870942d1b417173%3A0xca81fef0aeee7998!2sBirmingham!5e0!3m2!1sen!2suk!4v1609863229549!5m2!1sen!2suk" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div></div></section><!-- map block --><!-- change history block --><h2>Change History</h2><section class="history"><div class="row"><div class="col-md-6 border-right-dark-grey p-4"><!-- Tabs nav --><div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical"><a class="nav-link mb-4 ml-4 mr-2 p-3 active icon-avatar" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><p><b>Chloe Jones</b><br><b>Contact allocated</b><br>Mon 28/10/20 14:55</p></a><a class="nav-link mb-4 ml-4 mr-2 p-3 icon-avatar" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><p><b>Chloe Jones</b><br><b>Contact allocated</b><br>Mon 28/10/20 14:55</p></a><a class="nav-link mb-4 ml-4 mr-2 p-3 icon-avatar" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><p><b>Chloe Jones</b><br><b>Contact allocated</b><br>Mon 28/10/20 14:55</p></a><a class="nav-link mb-4 ml-4 mr-2 p-3 icon-avatar" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><p><b>Chloe Jones</b><br><b>Contact allocated</b><br>Mon 28/10/20 14:55</p></a></div></div><div class="col-md-6"><!-- Tabs content --><div class="tab-content" id="v-pills-tabContent"><div class="tab-pane fade show active p-5" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><p>Route code updated from<br>—— to 77A</p></div><div class="tab-pane fade p-5" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"><p>Route code updated from<br>—— to 77B</p></div><div class="tab-pane fade p-5" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"><p>Route code updated from<br>—— to 77C</p></div><div class="tab-pane fade p-5" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"><p>Route code updated from<br>—— to 77D</p></div></div></div></div></section><!-- / change history block --><!-- tags block --><h2>Tags</h2><div class="wrapper-tabs"><span class="tag">Tag</span><span class="tag">Tag</span><span class="tag">A Tag With a Long String</span> <span class="tag">Tag</span><span class="tag">Tag</span><span class="tag">Tag</span></div><!-- /tags block --><!-- form elements block --><h2>Form elements</h2><section><form><div class="row"><div class="col col-md-12 col-lg-4"><label>Label</label> <input type="text" class="form-control is-invalid" placeholder="Input text"><div class="invalid-feedback">Please provide a valid input</div></div><div class="col col-md-12 col-lg-4"><label>Label</label> <label class="prepopulated">Prepopulated label</label></div><div class="col col-md-12 col-lg-4"><label>Label</label> <label class="prepopulated">Prepopulated label</label></div><div class="col col-md-12 col-lg-4"><label>Label</label> <input type="text" class="form-control is-valid" placeholder="Input text"><div class="valid-feedback">Looks good!</div></div><div class="col col-md-12 col-lg-4"><label>Label</label> <input type="text" class="form-control" placeholder="Input text"></div><div class="col col-md-12 col-lg-4"><label>Label</label> <input type="text" class="form-control" placeholder="Input text"></div><div class="col col-md-12 col-lg-8"><label>Label</label> <textarea class="form-control" placeholder="Lorem ipsum sanct amet"></textarea></div></div></form><hr><form><div class="row align-items-center"><div class="col col-md-12 col-lg-6"><label>Label</label> <input type="text" class="form-control" placeholder="Input text"></div><div class="col col-md-12 col-lg-6"><button class="btn btn-outline-secondary input-mt">Look up</button> <span class="secondary-color form-label-align-middle px-2">Enter Manually</span></div></div></form><hr><form><div class="row align-items-center"><div class="col col-md-3 col-lg-3"><label>Label</label> <input type="text" class="form-control" placeholder="Input text"></div><div class="col col-md-6 col-lg-6"><input type="text" class="form-control input-mt" placeholder="Input text"></div><div class="col col-md-3 col-lg-3"><button class="btn btn-add-secondary btn-outline-secondary input-mt mx-2"></button> <img class="input-mt" src="../img/ico-close-tab-2.svg"></div><div class="col col-md-3col-lg-3"><label>Label</label> <select class="form-control"><option value="1">Status</option><option value="2">Open</option><option value="3">Closed</option></select></div><div class="col col-md-3 col-lg-3"><img class="input-mt" src="../img/ico-close-tab-2.svg"></div></div></form></section><!-- /form elements block --><!-- form elements with cards block --><h2>Form elements with cards</h2><div class="row"><div class="col col-md-12 col-lg-8"><section><form><div class="row"><div class="col col-md-12 col-lg-4"><label>Label</label> <input type="text" class="form-control is-invalid" placeholder="Input text"><div class="invalid-feedback">Please provide a valid input</div></div><div class="col col-md-12 col-lg-4"><label>Label</label> <label class="prepopulated">Prepopulated label</label></div><div class="col col-md-12 col-lg-4"><label>Label</label> <label class="prepopulated">Prepopulated label</label></div><div class="col col-md-12 col-lg-4"><label>Label</label> <input type="text" class="form-control is-valid" placeholder="Input text"><div class="valid-feedback">Looks good!</div></div><div class="col col-md-12 col-lg-4"><label>Label</label> <input type="text" class="form-control" placeholder="Input text"></div><div class="col col-md-12 col-lg-4"><label>Label</label> <input type="text" class="form-control" placeholder="Input text"></div></div></form><hr><form><div class="row"><div class="col col-md-12 col-lg-6"><label>Label</label> <input type="text" class="form-control" placeholder="Input text"></div><div class="col col-md-12 col-lg-6"><button class="btn btn-outline-secondary input-mt">Look up</button> <span class="secondary-color form-label-align-middle px-2">Enter Manually</span></div></div></form><div class="row"><div class="col col-md-12"><ul class="no-list list-addresses scroll-style-1"><li>1 Street Name, Town, City, County, Postcode</li><li>2 Street Name, Town, City, County, Postcode</li><li>3 Street Name, Town, City, County, Postcode</li><li>4 Street Name, Town, City, County, Postcode</li><li>5 Street Name, Town, City, County, Postcode</li><li>6 Street Name, Town, City, County, Postcode</li><li>7 Street Name, Town, City, County, Postcode</li><li>8 Street Name, Town, City, County, Postcode</li><li>9 Street Name, Town, City, County, Postcode</li><li>10 Street Name, Town, City, County, Postcode</li><li>11 Street Name, Town, City, County, Postcode</li><li>12 Street Name, Town, City, County, Postcode</li><li>13 Street Name, Town, City, County, Postcode</li><li>14 Street Name, Town, City, County, Postcode</li><li>15 Street Name, Town, City, County, Postcode</li><li>16 Street Name, Town, City, County, Postcode</li><li>17 Street Name, Town, City, County, Postcode</li><li>18 Street Name, Town, City, County, Postcode</li><li>19 Street Name, Town, City, County, Postcode</li><li>20 Street Name, Town, City, County, Postcode</li><li>21 Street Name, Town, City, County, Postcode</li><li>22 Street Name, Town, City, County, Postcode</li><li>23 Street Name, Town, City, County, Postcode</li><li>24 Street Name, Town, City, County, Postcode</li></ul></div></div><hr><form><div class="row align-items-center"><div class="col col-md-3 col-lg-3 pl-0 pr-0"><label>Label</label> <input type="text" class="form-control" placeholder="Input text"></div><div class="col col-md-6 col-lg-6"><input type="text" class="form-control input-mt" placeholder="Input text"></div><div class="col col-md-3 col-lg-3 pl-0 pr-0"><button class="btn btn-add-secondary btn-outline-secondary input-mt mx-2"></button> <img class="input-mt" src="../img/ico-close-tab-2.svg"></div></div></form></section></div><!-- /form elements with cards block --><!-- links block --><div class="col col-md-12 col-lg-4"><section class="card-info color-primary icon-twitter"><p>Type: Late Running<br>Incident date: 09/11/20<br>Route: 25<br>Justified<br>Compensation: No<br>Status: Open</p></section><section class="card-info color-secondary icon-twitter"><p>Type: Late Running<br>Incident date: 09/11/20<br>Route: 25<br>Justified<br>Compensation: No<br>Status: Open</p></section><section class="card-info color-tertiary icon-twitter"><p>Type: Late Running<br>Incident date: 09/11/20<br>Route: 25<br>Justified<br>Compensation: No<br>Status: Open</p></section></div></div><!-- links block --><div class="row"><div class="col col-md-12"><section><div class="row"><div class="col col-md-9"><h3>Links</h3></div><div class="col col-md-3"><button class="btn btn-outline-secondary w-100">Add Link</button></div></div><div class="row"><div class="col col-md-12"><ul class="no-list list-links"><li class="link-primary"><b>1364 Customer Services Driver Behaviour</b><br>12/08/2020 Closed</li><li class="link-secondary"><b>1364 Customer Services Driver Behaviour</b><br>12/08/2020 Closed</li></ul></div></div></section></div></div><!-- /links block --><!-- carousel state block --><h2>State with navigation</h2><section class="carousel-state pr"><!-- Slider main container --><div class="swiper-container"><!-- Additional required wrapper --><div class="swiper-wrapper"><!-- Slides --><section class="card-flow step icon-twitter swiper-slide"><p><b>Contact recieved</b><br>via twitter<br>28/10/20 14:55</p></section><section class="card-flow step icon-avatar swiper-slide"><p><b>Contact recieved</b><br>via twitter<br>28/10/20 14:55</p></section><section class="card-flow step icon-twitter swiper-slide"><p><b>Contact recieved</b><br>via twitter<br>28/10/20 14:55</p></section><section class="card-flow step icon-avatar swiper-slide"><p><b>Contact recieved</b><br>via twitter<br>28/10/20 14:55</p></section><section class="card-flow step icon-twitter swiper-slide"><p><b>Contact recieved</b><br>via twitter<br>28/10/20 14:55</p></section><section class="card-flow step icon-avatar swiper-slide"><p><b>Contact recieved</b><br>via twitter<br>28/10/20 14:55</p></section><section class="card-flow step icon-twitter swiper-slide"><p><b>Contact recieved</b><br>via twitter<br>28/10/20 14:55</p></section><section class="card-flow step icon-avatar swiper-slide"><p><b>Contact recieved</b><br>via twitter<br>28/10/20 14:55</p></section><section class="card-flow end icon-twitter swiper-slide"><p><b>Contact recieved</b><br>via twitter<br>28/10/20 14:55</p></section><div class="swiper-slide"><!-- end on a blank slide so the last has space to show it's status icon
-                                    --></div></div><!-- If we need scrollbar --><div class="swiper-scrollbar"></div></div><!-- If we need navigation buttons --><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></section><!-- / state carousel block --><!-- notes block --><h2>Notes</h2><ul class="nav nav-tabs nav-tabs-horizontal" id="myTab" role="tablist"><li class="nav-item"><a class="nav-link active nav-link-edit" id="customer-reply-tab" data-toggle="tab" href="#tab-1" role="tab" aria-controls="home" aria-selected="true">Customer Reply</a></li><li class="nav-item"><a class="nav-link nav-link-edit" id="private-notes-tab" data-toggle="tab" href="#tab-2" role="tab" aria-controls="profile" aria-selected="false">Private Note</a></li></ul><section><div class="tab-content" id="myTabContent"><div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="customer-reply-tab"><div class="row"><div class="col col-md-2 ct"><img class="rounded-circle" alt="" src="img/avatar.jpg"></div><div class="col col-md-10"><form action="#"><input type="text" class="form-control mb-3" placeholder="To: name@email.com"> <input type="text" class="form-control mb-3" placeholder="Subject: Case 1"> <textarea class="form-control mb-3" placeholder="Message"></textarea><div class="text-right"><button class="btn wide btn-secondary">Send to customer</button></div></form></div></div></div><div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="private-notes-tab"><div class="row"><div class="col col-md-2 ct"><img class="rounded-circle" alt="" src="img/avatar.jpg"></div><div class="col col-md-10"><p>Lorem ipsum sanct amet.</p></div></div></div></div></section><!-- /notes block --><!-- notes block 2 --><ul class="nav nav-tabs nav-tabs-horizontal" id="myTab" role="tablist"><li class="nav-item"><a class="nav-link active" id="customer-reply-tab" data-toggle="tab" href="#tab-all" role="tab" aria-controls="home" aria-selected="true">All <span class="value">2</span></a></li><li class="nav-item"><a class="nav-link" id="private-notes-tab" data-toggle="tab" href="#tab-cr" role="tab" aria-controls="profile" aria-selected="false">Customer Replies <span class="value">2</span></a></li><li class="nav-item"><a class="nav-link" id="private-notes-tab" data-toggle="tab" href="#tab-notes" role="tab" aria-controls="profile" aria-selected="false">Notes <span class="value">2</span></a></li></ul><div class="tab-content tab-content-horizontal" id="myTabContent"><div class="tab-pane fade show active" id="tab-all" role="tabpanel" aria-labelledby="All"><div class="row"><div class="col col-12"><section class="card-info color-primary icon-avatar"><p><b>Chloe Jones Replied 3 days ago</b><br><br>Hi Richard, Thanks for the feedback. Could I ask which route you were travelling on?</p></section></div></div></div><div class="tab-pane fade show" id="tab-cr" role="tabpanel" aria-labelledby="All"><div class="row"><div class="col col-12"><section class="card-info color-secondary icon-avatar"><p><b>Chloe Jones Replied 3 days ago</b><br><br>Hi Richard, Thanks for the feedback. Could I ask which route you were travelling on?</p></section></div></div></div><div class="tab-pane fade show" id="tab-notes" role="tabpanel" aria-labelledby="All"><div class="row"><div class="col col-12"><section class="card-info color-tertiary icon-avatar"><p><b>Chloe Jones Replied 3 days ago</b><br><br>Hi Richard, Thanks for the feedback. Could I ask which route you were travelling on?</p></section></div></div></div></div><!-- / notes block 2 --></div></div></div><footer class="footer container-fluid fixed-bottom border-top-dark-grey"><ul class="footer-values no-list"><li>All <span class="footer-value">30</span></li><li>My Contacts <span class="footer-value">10</span></li><li>Contacts in the last hour <span class="footer-value">6</span></li><li>Most common feedback today <span class="footer-value">Covid capacity</span></li></ul></footer><!-- put modals here --><!-- sort modal --><div class="modal animate__animated slideInRight animate__slideInRight modal-sort modal-right" tabindex="-1" role="dialog" aria-labelledby="table filter" aria-hidden="true"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header"><h4 class="modal-title mb-0" id="table Filter">Column options</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div><div class="modal-body"><p>Add or remove columns.<br>To change the order of the column<br>order, drag and drop a field</p><hr><div id="sortable"><div class="row hover-crosshair"><div class="col-md-9 pr-0 pl-0"><select class="form-control"><option value="1">Status</option><option value="2">Open</option><option value="3">Closed</option></select></div><div class="col-md-3 ct"><img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg"></div></div><div class="row hover-crosshair"><div class="col-md-9 pr-0 pl-0"><select class="form-control"><option value="1">Date Opened</option><option value="2">Open</option><option value="3">Closed</option></select></div><div class="col-md-3 ct"><img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg"></div></div><div class="row hover-crosshair"><div class="col-md-9 pr-0 pl-0"><select class="form-control"><option value="1">Contact ID</option><option value="2">Open</option><option value="3">Closed</option></select></div><div class="col-md-3 ct"><img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg"></div></div><div class="row hover-crosshair"><div class="col-md-9 pr-0 pl-0"><select class="form-control"><option value="1">Customer</option><option value="2">Open</option><option value="3">Closed</option></select></div><div class="col-md-3 ct"><img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg"></div></div><div class="row hover-crosshair"><div class="col-md-9 pr-0 pl-0"><select class="form-control"><option value="1">Category</option><option value="2">Open</option><option value="3">Closed</option></select></div><div class="col-md-3 ct"><img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg"></div></div></div><div class="row my-4"><div class="col-md-12"><p class="primary symbol-add hover-pointer m-0">Add a column</p></div></div><hr><div class="row"><div class="col-md-6"><button class="btn btn-secondary width-100">Apply</button></div><div class="col-md-6"><button class="btn btn-outline-secondary width-100 primary border-grey" data-dismiss="modal" aria-label="Close">Cancel</button></div></div></div></div></div></div><!-- /sort modal --><!-- filter by modal --><div class="modal animate__animated slideInRight animate__slideInRight modal-filter-by modal-right" tabindex="-1" role="dialog" aria-labelledby="table filter" aria-hidden="true"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header"><h4 class="modal-title mb-0" id="table Filter">Filter by</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div><div class="modal-body"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><hr><div id="sortable-filter-by"><div class="row hover-crosshair"><div class="col-md-9 pr-0 pl-0"><select class="form-control"><option value="1">Status</option><option value="2">Open</option><option value="3">Closed</option></select></div><div class="col-md-3 ct"><img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg"></div></div><div class="row hover-crosshair"><div class="col-md-9 pr-0 pl-0"><select class="form-control"><option value="1">Date Opened</option><option value="2">Open</option><option value="3">Closed</option></select></div><div class="col-md-3 ct"><img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg"></div></div><div class="row hover-crosshair"><div class="col-md-9 pr-0 pl-0"><select class="form-control"><option value="1">Contact ID</option><option value="2">Open</option><option value="3">Closed</option></select></div><div class="col-md-3 ct"><img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg"></div></div><div class="row hover-crosshair"><div class="col-md-9 pr-0 pl-0"><select class="form-control"><option value="1">Customer</option><option value="2">Open</option><option value="3">Closed</option></select></div><div class="col-md-3 ct"><img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg"></div></div><div class="row hover-crosshair"><div class="col-md-9 pr-0 pl-0"><select class="form-control"><option value="1">Category</option><option value="2">Open</option><option value="3">Closed</option></select></div><div class="col-md-3 ct"><img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg"></div></div></div><hr><div class="row"><div class="col-md-6"><button class="btn btn-secondary width-100">Apply</button></div><div class="col-md-6"><button class="btn btn-outline-secondary width-100 primary border-grey" data-dismiss="modal" aria-label="Close">Cancel</button></div></div></div></div></div></div><!-- / filter by modal --><script src="js/all.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="./img/icon.png" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/uoo7ewl.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/datatables.min.css"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <title>EPM 5g - v1</title>
+    </head>
+    
+    <body>
+        <div class="mobile-warning ct">
+            <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+            width="48" height="48">
+                <path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path>
+            </svg>
+            <br/>
+            <br/>
+             <h3>This application is best used on tablets in landscape orientation<br/>or desktop computers</h3>
+        </div>
+        <!-- md down top nav -->
+        <nav class="navbar navbar-expand-md navbar-dark d-sm-flex d-md-none">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle no-arrow" href="#" id="navbarDropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+          <img alt="" src="img/ico-hamburger.svg"/>
+
+        </a>
+                </li>
+            </ul> <a class="navbar-brand" href="#"><img alt="EPM" src="img/logo.svg"/></a>
+        </nav>
+        <!-- / md down top nav -->
+        <!-- medium up top nav -->
+        <div class="fixed-top">
+            <nav class="navbar navbar-expand-md navbar-dark d-none d-md-flex">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown mr-3"> <a class="nav-link dropdown-toggle dropdown-toggle-main no-arrow" href="#"
+                        id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+
+        <img alt="" src="img/ico-hamburger.svg"/>
+
+      </a>
+                        <div class="dropdown-menu top" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item icon-1" href="#">Accidents</a> <a class="dropdown-item icon-2"
+                            href="#">Customers</a> <a class="dropdown-item icon-3" href="#">Insights</a>
+                        </div>
+                    </li>
+                </ul> <a class="navbar-brand" href="#"><img alt="EPM" src="img/logo.svg"/></a>
+                <ul
+                class="nav nav-tabs mr-auto">
+                    <li class="nav-item"> <a class="nav-link active" href="#">
+
+        Accidents
+
+        <img alt="" src="img/ico-close-tab.svg"/>
+
+      </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">
+
+        Customers
+
+        <img alt="" src="img/ico-close-tab.svg"/>
+
+      </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">
+
+        Insights
+
+        <img alt="" src="img/ico-close-tab.svg"/>
+
+      </a>
+                    </li>
+                    </ul>
+                    <ul class="navbar-nav nav-right">
+                        <li class="nav-item alert-dot-black-border bg-ui-1"> <a href="#"><img alt="" src="img/ico-alert.svg"/></a>
+                        </li>
+                        <li class="nav-item alert-dot-black-border bg-ui-3"> <a href="#"><img alt="" src="img/ico-star.svg"/></a>
+                        </li>
+                        <li class="nav-item alert-dot-black-border bg-ui-4"> <a href="#"><img alt="" src="img/ico-cog.svg"/></a>
+                        </li>
+                        <li class="nav-item nav-avatar"> <a href="#"><img class="rounded-circle" alt="" src="img/avatar.jpg"/></a>
+                        </li>
+                    </ul>
+            </nav>
+            <!-- / large up top nav ends -->
+            <nav class="navbar nav-secondary bg-white navbar-expand-md navbar-dark d-none d-md-flex">
+                <div class="mr-auto">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item home"><a href="#"></a>
+
+                            </li>
+                            <li class="breadcrumb-item" aria-current="page"><a href="#">Page</a>
+
+                            </li>
+                            <li class="breadcrumb-item" aria-current="page"><a href="#">Page</a>
+
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <ul class="navbar-nav nav-secondary-right mr-4">
+                    <li class="nav-item text"> <a href="#">All contacts <span class="value">30</span></a>
+                    </li>
+                    <li class="nav-item nav-item-1 active" data-toggle="tooltip" data-placement="bottom"
+                    title="Details"> <a href="#"></a>
+                    </li>
+                    <li class="nav-item nav-item-2" data-toggle="tooltip" data-placement="bottom"
+                    title="Customer"> <a href="#"></a>
+                    </li>
+                    <li class="nav-item nav-item-3" data-toggle="tooltip" data-placement="bottom"
+                    title="Notes"> <a href="#"></a>
+                    </li>
+                    <li class="nav-item nav-item-4" data-toggle="tooltip" data-placement="bottom"
+                    title="History"> <a href="#"></a>
+                    </li>
+                    <li class="nav-item nav-item-5  alert-dot-white-border bg-ui-1" data-toggle="tooltip"
+                    data-placement="bottom" title="Reports"> <a href="#"></a>
+                    </li>
+                    <li class="nav-item nav-item-6 alert-dot-white-border bg-ui-3" data-toggle="tooltip"
+                    data-placement="bottom" title="Location"> <a href="#"></a>
+                    </li>
+                    <li class="nav-item nav-item-7 alert-dot-white-border bg-ui-4" data-toggle="tooltip"
+                    data-placement="bottom" title="Data"> <a href="#"></a>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-dropdown btn-secondary btn-save-close dropdown-toggle"
+                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">Save & Close</button>
+                    <div class="dropdown-menu dropdown-menu-save-close"
+                    aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container-fluid content-wrapper">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 col-sidebar pr">
+                    <div class="close-sidebar hover-pointer">
+                        <img class="close-sidebar-icon show" alt="close sidebar" src="img/ico-side-bar-close.svg">
+                        <img class="open-sidebar-icon" alt="open sidebar" src="img/ico-side-bar-open.svg">
+                    </div>
+                    <div class="inner border-bottom-dark-grey">
+                        <button type="button" class="btn ct btn-add width-100 btn-secondary">Add new Contact</button>
+                    </div>
+                    <ul class="sidebar-cards no-list scroll-style-1">
+                        <li>
+                            <div class="inner"> <b>1262</b>
+                                <br />Driver Behaviour</div>
+                        </li>
+                        <li>
+                            <div class="inner"> <b>1262</b>
+                                <br />Driver Behaviour</div>
+                        </li>
+                        <li>
+                            <div class="inner"> <b>1262</b>
+                                <br />Driver Behaviour</div>
+                        </li>
+                        <li>
+                            <div class="inner"> <b>1262</b>
+                                <br />Driver Behaviour</div>
+                        </li>
+                        <li>
+                            <div class="inner"> <b>1262</b>
+                                <br />Driver Behaviour</div>
+                        </li>
+                        <li>
+                            <div class="inner"> <b>1262</b>
+                                <br />Driver Behaviour</div>
+                        </li>
+                        <li>
+                            <div class="inner"> <b>1262</b>
+                                <br />Driver Behaviour</div>
+                        </li>
+                        <li>
+                            <div class="inner"> <b>1262</b>
+                                <br />Driver Behaviour</div>
+                        </li>
+                        <li>
+                            <div class="inner"> <b>1262</b>
+                                <br />Driver Behaviour</div>
+                        </li>
+                        <li>
+                            <div class="inner"> <b>1262 (third last)</b>
+                                <br />Driver Behaviour</div>
+                        </li>
+                        <li>
+                            <div class="inner"> <b>1262 (second last)</b>
+                                <br />Driver Behaviour</div>
+                        </li>
+                        <li>
+                            <div class="inner"> <b>1262 (last)</b>
+                                <br />Driver Behaviour</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- main content div -->
+                <div class="col-md-9 col-sm-12 col-main-content scroll-style-1">
+                    <!-- data tables example -->
+                    <nav class="navbar nav-bar-datatable navbar-expand-md mb-5">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <form class="search form-inline my-2 my-lg-0 mr-auto">
+                                <input class="form-control datatable-search" type="search" placeholder="Filter by Keyword"
+                                aria-label="Filter by Keyword">
+                            </form>
+                            <ul class="navbar-nav nav-filter-dropdowns mr-2">
+                                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                Date
+
+              </a>
+                                    <div class="dropdown-menu shadow" aria-labelledby="navbarDropdown"> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox" />Label</label></span>
+                                        <span
+                                        class="dropdown-item" href="#">
+                                            <label>
+                                                <input type="checkbox" name="checkbox" />Label</label>
+                                            </span> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox" />Label</label></span>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                Status
+
+              </a>
+                                    <div class="dropdown-menu shadow" aria-labelledby="navbarDropdown"> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox" />Label</label></span>
+                                        <span
+                                        class="dropdown-item" href="#">
+                                            <label>
+                                                <input type="checkbox" name="checkbox" />Label</label>
+                                            </span> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox" />Label</label></span>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                Depot
+
+              </a>
+                                    <div class="dropdown-menu shadow" aria-labelledby="navbarDropdown"> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox" />Label</label></span>
+                                        <span
+                                        class="dropdown-item" href="#">
+                                            <label>
+                                                <input type="checkbox" name="checkbox" />Label</label>
+                                            </span> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox" />Label</label></span>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                Tags
+
+              </a>
+                                    <div class="dropdown-menu shadow" aria-labelledby="navbarDropdown"> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox" />Label</label></span>
+                                        <span
+                                        class="dropdown-item" href="#">
+                                            <label>
+                                                <input type="checkbox" name="checkbox" />Label</label>
+                                            </span> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox" />Label</label></span>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                Route
+
+              </a>
+                                    <div class="dropdown-menu shadow" aria-labelledby="navbarDropdown"> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox" />Label</label></span>
+                                        <span
+                                        class="dropdown-item" href="#">
+                                            <label>
+                                                <input type="checkbox" name="checkbox" />Label</label>
+                                            </span> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox" />Label</label></span>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                Allocation
+
+              </a>
+                                    <div class="dropdown-menu shadow" aria-labelledby="navbarDropdown"> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox" />Label</label></span>
+                                        <span
+                                        class="dropdown-item" href="#">
+                                            <label>
+                                                <input type="checkbox" name="checkbox" />Label</label>
+                                            </span> <span class="dropdown-item" href="#"><label><input type="checkbox" name="checkbox" />Label</label></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-filter btn-filter-by" data-toggle="modal" data-target=".modal-filter-by">Filter by</button>
+                        <button class="btn btn-filter" data-toggle="modal" data-target=".modal-sort">
+                            <img alt="settings" src="img/ico-cog.svg" />
+                        </button>
+                    </nav>
+                    <table id="example" class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Status</th>
+                                <th>Date Opened</th>
+                                <th>Contact ID</th>
+                                <th>Customer</th>
+                                <th>Category</th>
+                                <th>More</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="closed">Closed</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+                  <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+                </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>12 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Debbie Example</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="closed">Closed</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="closed">Closed</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="open">Open</td>
+                                <td>10 / 11 / 2020</td>
+                                <td>34156</td>
+                                <td>Paul Sample</td>
+                                <td>Category name</td>
+                                <td class="ct"> <a href="#" id="table-dropdown" data-toggle="dropdown-table-row-1" aria-haspopup="true"
+                                    aria-expanded="false"></a>
+                                    <div class="dropdown-menu dropdown-menu-save-close"
+                                    aria-labelledby="table-dropdown"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                    <div class="dropdown"> <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+
+      <img class="table-ellipsis" src="img/ico-ellipsis.svg"/>
+
+    </a>
+                                        <div class="dropdown-menu dropdown-menu-elipsis" aria-labelledby="table row drop down menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- / data tables example -->
+                    <!-- map block -->
+                     <h2>Map</h2>
+                    <section class="map">
+                        <div class="row pb-3 justify-content-md-center">
+                            <div class="col-md-5">
+                                <input type="text" class="form-control input-search" placeholder="Search location">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155383.85487651697!2d-1.9018327442302951!3d52.51764223476423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870942d1b417173%3A0xca81fef0aeee7998!2sBirmingham!5e0!3m2!1sen!2suk!4v1609863229549!5m2!1sen!2suk"
+                                width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                                aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- map block -->
+                    <!-- change history block -->
+                     <h2>Change History</h2>
+                    <section class="history">
+                        <div class="row">
+                            <div class="col-md-6 border-right-dark-grey p-4">
+                                <!-- Tabs nav -->
+                                <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab"
+                                role="tablist" aria-orientation="vertical"> <a class="nav-link mb-4 ml-4 mr-2 p-3 active icon-avatar" id="v-pills-home-tab"
+                                    data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home"
+                                    aria-selected="true">
+
+                <p><b>Chloe Jones</b><br />
+
+                  <b>Contact allocated</b><br />
+
+                  Mon 28/10/20 14:55</p>
+
+              </a> <a class="nav-link mb-4 ml-4 mr-2 p-3 icon-avatar" id="v-pills-profile-tab"
+                                    data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                    aria-selected="false">
+
+                <p><b>Chloe Jones</b><br />
+
+                  <b>Contact allocated</b><br />
+
+                  Mon 28/10/20 14:55</p>
+
+              </a> <a class="nav-link mb-4 ml-4 mr-2 p-3 icon-avatar" id="v-pills-messages-tab"
+                                    data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
+                                    aria-selected="false">
+
+                <p><b>Chloe Jones</b><br />
+
+                  <b>Contact allocated</b><br />
+
+                  Mon 28/10/20 14:55</p>
+
+              </a> <a class="nav-link mb-4 ml-4 mr-2 p-3 icon-avatar" id="v-pills-settings-tab"
+                                    data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                                    aria-selected="false">
+
+                <p><b>Chloe Jones</b><br />
+
+                  <b>Contact allocated</b><br />
+
+                  Mon 28/10/20 14:55</p>
+
+              </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Tabs content -->
+                                <div class="tab-content" id="v-pills-tabContent">
+                                    <div class="tab-pane fade show active p-5" id="v-pills-home" role="tabpanel"
+                                    aria-labelledby="v-pills-home-tab">
+                                        <p>Route code updated from
+                                            <br />—— to 77A</p>
+                                    </div>
+                                    <div class="tab-pane fade p-5" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                        <p>Route code updated from
+                                            <br />—— to 77B</p>
+                                    </div>
+                                    <div class="tab-pane fade p-5" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                        <p>Route code updated from
+                                            <br />—— to 77C</p>
+                                    </div>
+                                    <div class="tab-pane fade p-5" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                                        <p>Route code updated from
+                                            <br />—— to 77D</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- / change history block -->
+                    <!-- tags block -->
+                     <h2>Tags</h2>
+                    <div class="wrapper-tabs"> <span class="tag">Tag</span><span class="tag">Tag</span><span class="tag">A Tag With a Long String</span>
+                        <span
+                        class="tag">Tag</span><span class="tag">Tag</span><span class="tag">Tag</span>
+                    </div>
+                    <!-- /tags block -->
+                    <!-- form elements block -->
+                     <h2>Form elements</h2>
+                    <section>
+                        <form>
+                            <div class="row">
+                                <div class="col col-md-12 col-lg-4">
+                                    <label>Label</label>
+                                    <input type="text" class="form-control is-invalid" placeholder="Input text">
+                                    <div class="invalid-feedback">Please provide a valid input</div>
+                                </div>
+                                <div class="col col-md-12 col-lg-4">
+                                    <label>Label</label>
+                                    <label class="prepopulated">Prepopulated label</label>
+                                </div>
+                                <div class="col col-md-12 col-lg-4">
+                                    <label>Label</label>
+                                    <label class="prepopulated">Prepopulated label</label>
+                                </div>
+                                <div class="col col-md-12 col-lg-4">
+                                    <label>Label</label>
+                                    <input type="text" class="form-control is-valid" placeholder="Input text">
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
+                                <div class="col col-md-12 col-lg-4">
+                                    <label>Label</label>
+                                    <input type="text" class="form-control" placeholder="Input text">
+                                </div>
+                                <div class="col col-md-12 col-lg-4">
+                                    <label>Label</label>
+                                    <input type="text" class="form-control" placeholder="Input text">
+                                </div>
+                                <div class="col col-md-12 col-lg-8">
+                                    <label>Label</label>
+                                    <textarea class="form-control" placeholder="Lorem ipsum sanct amet"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                        <hr>
+                        <form>
+                            <div class="row align-items-center">
+                                <div class="col col-md-12 col-lg-6">
+                                    <label>Label</label>
+                                    <input type="text" class="form-control" placeholder="Input text">
+                                </div>
+                                <div class="col col-md-12 col-lg-6">
+                                    <button class="btn btn-outline-secondary input-mt">Look up</button> <span class="secondary-color form-label-align-middle px-2">Enter Manually</span>
+                                </div>
+                            </div>
+                        </form>
+                        <hr>
+                        <form>
+                            <div class="row align-items-center">
+                                <div class="col col-md-3 col-lg-3">
+                                    <label>Label</label>
+                                    <input type="text" class="form-control" placeholder="Input text">
+                                </div>
+                                <div class="col col-md-6 col-lg-6">
+                                    <input type="text" class="form-control input-mt" placeholder="Input text">
+                                </div>
+                                <div class="col col-md-3 col-lg-3">
+                                    <button class="btn btn-add-secondary btn-outline-secondary input-mt mx-2"></button>
+                                    <img class="input-mt" src="../img/ico-close-tab-2.svg" />
+                                </div>
+                                <div class="col col-md-3col-lg-3">
+                                    <label>Label</label>
+                                    <select class="form-control">
+                                        <option value="1">Status</option>
+                                        <option value="2">Open</option>
+                                        <option value="3">Closed</option>
+                                    </select>
+                                </div>
+                                <div class="col col-md-3 col-lg-3">
+                                    <img class="input-mt" src="../img/ico-close-tab-2.svg" />
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                    <!-- /form elements block -->
+                    <!-- form elements with cards block -->
+                     <h2>Form elements with cards</h2>
+                    <div class="row">
+                        <div class="col col-md-12 col-lg-8">
+                            <section>
+                                <form>
+                                    <div class="row">
+                                        <div class="col col-md-12 col-lg-4">
+                                            <label>Label</label>
+                                            <input type="text" class="form-control is-invalid" placeholder="Input text">
+                                            <div class="invalid-feedback">Please provide a valid input</div>
+                                        </div>
+                                        <div class="col col-md-12 col-lg-4">
+                                            <label>Label</label>
+                                            <label class="prepopulated">Prepopulated label</label>
+                                        </div>
+                                        <div class="col col-md-12 col-lg-4">
+                                            <label>Label</label>
+                                            <label class="prepopulated">Prepopulated label</label>
+                                        </div>
+                                        <div class="col col-md-12 col-lg-4">
+                                            <label>Label</label>
+                                            <input type="text" class="form-control is-valid" placeholder="Input text">
+                                            <div class="valid-feedback">Looks good!</div>
+                                        </div>
+                                        <div class="col col-md-12 col-lg-4">
+                                            <label>Label</label>
+                                            <input type="text" class="form-control" placeholder="Input text">
+                                        </div>
+                                        <div class="col col-md-12 col-lg-4">
+                                            <label>Label</label>
+                                            <input type="text" class="form-control" placeholder="Input text">
+                                        </div>
+                                    </div>
+                                </form>
+                                <hr>
+                                <form>
+                                    <div class="row">
+                                        <div class="col col-md-12 col-lg-6">
+                                            <label>Label</label>
+                                            <input type="text" class="form-control" placeholder="Input text">
+                                        </div>
+                                        <div class="col col-md-12 col-lg-6 ">
+                                            <button class="btn btn-outline-secondary input-mt">Look up</button> <span class="secondary-color form-label-align-middle px-2">Enter Manually</span>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="row">
+                                    <div class="col col-md-12">
+                                        <ul class="no-list list-addresses scroll-style-1">
+                                            <li>1 Street Name, Town, City, County, Postcode</li>
+                                            <li>2 Street Name, Town, City, County, Postcode</li>
+                                            <li>3 Street Name, Town, City, County, Postcode</li>
+                                            <li>4 Street Name, Town, City, County, Postcode</li>
+                                            <li>5 Street Name, Town, City, County, Postcode</li>
+                                            <li>6 Street Name, Town, City, County, Postcode</li>
+                                            <li>7 Street Name, Town, City, County, Postcode</li>
+                                            <li>8 Street Name, Town, City, County, Postcode</li>
+                                            <li>9 Street Name, Town, City, County, Postcode</li>
+                                            <li>10 Street Name, Town, City, County, Postcode</li>
+                                            <li>11 Street Name, Town, City, County, Postcode</li>
+                                            <li>12 Street Name, Town, City, County, Postcode</li>
+                                            <li>13 Street Name, Town, City, County, Postcode</li>
+                                            <li>14 Street Name, Town, City, County, Postcode</li>
+                                            <li>15 Street Name, Town, City, County, Postcode</li>
+                                            <li>16 Street Name, Town, City, County, Postcode</li>
+                                            <li>17 Street Name, Town, City, County, Postcode</li>
+                                            <li>18 Street Name, Town, City, County, Postcode</li>
+                                            <li>19 Street Name, Town, City, County, Postcode</li>
+                                            <li>20 Street Name, Town, City, County, Postcode</li>
+                                            <li>21 Street Name, Town, City, County, Postcode</li>
+                                            <li>22 Street Name, Town, City, County, Postcode</li>
+                                            <li>23 Street Name, Town, City, County, Postcode</li>
+                                            <li>24 Street Name, Town, City, County, Postcode</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr>
+                                <form>
+                                    <div class="row align-items-center">
+                                        <div class="col col-md-3 col-lg-3 pl-0 pr-0">
+                                            <label>Label</label>
+                                            <input type="text" class="form-control" placeholder="Input text">
+                                        </div>
+                                        <div class="col col-md-6 col-lg-6">
+                                            <input type="text" class="form-control input-mt" placeholder="Input text">
+                                        </div>
+                                        <div class="col col-md-3 col-lg-3 pl-0 pr-0">
+                                            <button class="btn btn-add-secondary btn-outline-secondary input-mt mx-2"></button>
+                                            <img class="input-mt" src="../img/ico-close-tab-2.svg" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+                        <!-- /form elements with cards block -->
+                        <!-- links block -->
+                        <div class="col col-md-12 col-lg-4">
+                            <section class="card-info color-primary icon-twitter">
+                                <p>Type: Late Running
+                                    <br />Incident date: 09/11/20
+                                    <br />Route: 25
+                                    <br />Justified
+                                    <br />Compensation: No
+                                    <br />Status: Open</p>
+                            </section>
+                            <section class="card-info color-secondary icon-twitter">
+                                <p>Type: Late Running
+                                    <br />Incident date: 09/11/20
+                                    <br />Route: 25
+                                    <br />Justified
+                                    <br />Compensation: No
+                                    <br />Status: Open</p>
+                            </section>
+                            <section class="card-info color-tertiary icon-twitter">
+                                <p>Type: Late Running
+                                    <br />Incident date: 09/11/20
+                                    <br />Route: 25
+                                    <br />Justified
+                                    <br />Compensation: No
+                                    <br />Status: Open</p>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- links block -->
+                    <div class="row">
+                        <div class="col col-md-12">
+                            <section>
+                                <div class="row">
+                                    <div class="col col-md-9">
+                                         <h3>Links</h3>
+                                    </div>
+                                    <div class="col col-md-3">
+                                        <button class="btn btn-outline-secondary w-100">Add Link</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-md-12">
+                                        <ul class="no-list list-links">
+                                            <li class="link-primary"><b>1364 Customer Services Driver Behaviour</b>
+                                                <br />12/08/2020 Closed</li>
+                                            <li class="link-secondary"><b>1364 Customer Services Driver Behaviour</b>
+                                                <br />12/08/2020 Closed</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- /links block -->
+                    <!-- carousel state block -->
+                     <h2>State with navigation</h2>
+                    <section class="carousel-state pr">
+                        <!-- Slider main container -->
+                        <div class="swiper-container">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <section class="card-flow step icon-twitter swiper-slide">
+                                    <p><b>Contact recieved</b>
+                                        <br />via twitter
+                                        <br />28/10/20 14:55</p>
+                                </section>
+                                <section class="card-flow step icon-avatar swiper-slide">
+                                    <p><b>Contact recieved</b>
+                                        <br />via twitter
+                                        <br />28/10/20 14:55</p>
+                                </section>
+                                <section class="card-flow step icon-twitter swiper-slide">
+                                    <p><b>Contact recieved</b>
+                                        <br />via twitter
+                                        <br />28/10/20 14:55</p>
+                                </section>
+                                <section class="card-flow step icon-avatar swiper-slide">
+                                    <p><b>Contact recieved</b>
+                                        <br />via twitter
+                                        <br />28/10/20 14:55</p>
+                                </section>
+                                <section class="card-flow step icon-twitter swiper-slide">
+                                    <p><b>Contact recieved</b>
+                                        <br />via twitter
+                                        <br />28/10/20 14:55</p>
+                                </section>
+                                <section class="card-flow step icon-avatar swiper-slide">
+                                    <p><b>Contact recieved</b>
+                                        <br />via twitter
+                                        <br />28/10/20 14:55</p>
+                                </section>
+                                <section class="card-flow step icon-twitter swiper-slide">
+                                    <p><b>Contact recieved</b>
+                                        <br />via twitter
+                                        <br />28/10/20 14:55</p>
+                                </section>
+                                <section class="card-flow step icon-avatar swiper-slide">
+                                    <p><b>Contact recieved</b>
+                                        <br />via twitter
+                                        <br />28/10/20 14:55</p>
+                                </section>
+                                <section class="card-flow end icon-twitter swiper-slide">
+                                    <p><b>Contact recieved</b>
+                                        <br />via twitter
+                                        <br />28/10/20 14:55</p>
+                                </section>
+                                <div class="swiper-slide">
+                                    <!-- end on a blank slide so the last has space to show it's status icon
+                                    -->
+                                </div>
+                            </div>
+                            <!-- If we need scrollbar -->
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </section>
+                    <!-- / state carousel block -->
+                    <!-- notes block -->
+                     <h2>Notes</h2>
+                    <ul class="nav nav-tabs nav-tabs-horizontal" id="myTab" role="tablist">
+                        <li class="nav-item"> <a class="nav-link active nav-link-edit" id="customer-reply-tab" data-toggle="tab"
+                            href="#tab-1" role="tab" aria-controls="home" aria-selected="true">Customer Reply</a>
+                        </li>
+                        <li class="nav-item "> <a class="nav-link nav-link-edit" id="private-notes-tab" data-toggle="tab"
+                            href="#tab-2" role="tab" aria-controls="profile" aria-selected="false">Private Note</a>
+                        </li>
+                    </ul>
+                    <section>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="customer-reply-tab">
+                                <div class="row">
+                                    <div class="col col-md-2 ct">
+                                        <img class="rounded-circle" alt="" src="img/avatar.jpg">
+                                    </div>
+                                    <div class="col col-md-10">
+                                        <form action="#">
+                                            <input type="text" class="form-control mb-3" placeholder="To: name@email.com">
+                                            <input type="text" class="form-control mb-3" placeholder="Subject: Case 1">
+                                            <textarea class="form-control mb-3" placeholder="Message"></textarea>
+                                            <div class="text-right">
+                                                <button class="btn wide btn-secondary">Send to customer</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="private-notes-tab">
+                                <div class="row">
+                                    <div class="col col-md-2 ct">
+                                        <img class="rounded-circle" alt="" src="img/avatar.jpg">
+                                    </div>
+                                    <div class="col col-md-10">
+                                        <p>Lorem ipsum sanct amet.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /notes block -->
+                    <!-- notes block 2 -->
+                    <ul class="nav nav-tabs nav-tabs-horizontal" id="myTab" role="tablist">
+                        <li class="nav-item"> <a class="nav-link active" id="customer-reply-tab" data-toggle="tab" href="#tab-all"
+                            role="tab" aria-controls="home" aria-selected="true">All <span class="value">2</span></a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" id="private-notes-tab" data-toggle="tab" href="#tab-cr"
+                            role="tab" aria-controls="profile" aria-selected="false">Customer Replies <span class="value">2</span></a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" id="private-notes-tab" data-toggle="tab" href="#tab-notes"
+                            role="tab" aria-controls="profile" aria-selected="false">Notes <span class="value">2</span></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content tab-content-horizontal" id="myTabContent">
+                        <div class="tab-pane fade show active" id="tab-all" role="tabpanel" aria-labelledby="All">
+                            <div class="row">
+                                <div class="col col-12">
+                                    <section class="card-info color-primary icon-avatar">
+                                        <p><b>Chloe Jones Replied 3 days ago</b>
+                                            <br />
+                                            <br />Hi Richard, Thanks for the feedback. Could I ask which route you were
+                                            travelling on?</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show" id="tab-cr" role="tabpanel" aria-labelledby="All">
+                            <div class="row">
+                                <div class="col col-12">
+                                    <section class="card-info color-secondary icon-avatar">
+                                        <p><b>Chloe Jones Replied 3 days ago</b>
+                                            <br />
+                                            <br />Hi Richard, Thanks for the feedback. Could I ask which route you were
+                                            travelling on?</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show" id="tab-notes" role="tabpanel" aria-labelledby="All">
+                            <div class="row">
+                                <div class="col col-12">
+                                    <section class="card-info color-tertiary icon-avatar">
+                                        <p><b>Chloe Jones Replied 3 days ago</b>
+                                            <br />
+                                            <br />Hi Richard, Thanks for the feedback. Could I ask which route you were
+                                            travelling on?</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / notes block 2 -->
+                </div>
+            </div>
+        </div>
+        <footer class="footer container-fluid fixed-bottom border-top-dark-grey">
+            <ul class="footer-values no-list">
+                <li>All <span class="footer-value">30</span>
+
+                </li>
+                <li>My Contacts <span class="footer-value">10</span>
+
+                </li>
+                <li>Contacts in the last hour <span class="footer-value">6</span>
+
+                </li>
+                <li>Most common feedback today <span class="footer-value">Covid capacity</span>
+
+                </li>
+            </ul>
+        </footer>
+        <!-- put modals here -->
+        <!-- sort modal -->
+        <div class="modal animate__animated slideInRight animate__slideInRight modal-sort modal-right"
+        tabindex="-1" role="dialog" aria-labelledby="table filter" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                         <h4 class="modal-title mb-0" id="table Filter">Column options</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Add or remove columns.
+                            <br/>To change the order of the column
+                            <br/>order, drag and drop a field</p>
+                        <hr>
+                        <div id="sortable">
+                            <div class="row hover-crosshair">
+                                <div class="col-md-9 pr-0 pl-0">
+                                    <select class="form-control">
+                                        <option value="1">Status</option>
+                                        <option value="2">Open</option>
+                                        <option value="3">Closed</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 ct">
+                                    <img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg" />
+                                </div>
+                            </div>
+                            <div class="row hover-crosshair">
+                                <div class="col-md-9 pr-0 pl-0">
+                                    <select class="form-control">
+                                        <option value="1">Date Opened</option>
+                                        <option value="2">Open</option>
+                                        <option value="3">Closed</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 ct">
+                                    <img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg" />
+                                </div>
+                            </div>
+                            <div class="row hover-crosshair">
+                                <div class="col-md-9 pr-0 pl-0">
+                                    <select class="form-control">
+                                        <option value="1">Contact ID</option>
+                                        <option value="2">Open</option>
+                                        <option value="3">Closed</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 ct">
+                                    <img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg" />
+                                </div>
+                            </div>
+                            <div class="row hover-crosshair">
+                                <div class="col-md-9 pr-0 pl-0">
+                                    <select class="form-control">
+                                        <option value="1">Customer</option>
+                                        <option value="2">Open</option>
+                                        <option value="3">Closed</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 ct">
+                                    <img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg" />
+                                </div>
+                            </div>
+                            <div class="row hover-crosshair">
+                                <div class="col-md-9 pr-0 pl-0">
+                                    <select class="form-control">
+                                        <option value="1">Category</option>
+                                        <option value="2">Open</option>
+                                        <option value="3">Closed</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 ct">
+                                    <img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-md-12">
+                                <p class="primary symbol-add hover-pointer m-0">Add a column</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn btn-secondary width-100">Apply</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-outline-secondary width-100 primary border-grey"
+                                data-dismiss="modal" aria-label="Close">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /sort modal -->
+        <!-- filter by modal -->
+        <div class="modal animate__animated slideInRight animate__slideInRight modal-filter-by modal-right"
+        tabindex="-1" role="dialog" aria-labelledby="table filter" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                         <h4 class="modal-title mb-0" id="table Filter">Filter by</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <hr>
+                        <div id="sortable-filter-by">
+                            <div class="row hover-crosshair">
+                                <div class="col-md-9 pr-0 pl-0">
+                                    <select class="form-control">
+                                        <option value="1">Status</option>
+                                        <option value="2">Open</option>
+                                        <option value="3">Closed</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 ct">
+                                    <img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg" />
+                                </div>
+                            </div>
+                            <div class="row hover-crosshair">
+                                <div class="col-md-9 pr-0 pl-0">
+                                    <select class="form-control">
+                                        <option value="1">Date Opened</option>
+                                        <option value="2">Open</option>
+                                        <option value="3">Closed</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 ct">
+                                    <img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg" />
+                                </div>
+                            </div>
+                            <div class="row hover-crosshair">
+                                <div class="col-md-9 pr-0 pl-0">
+                                    <select class="form-control">
+                                        <option value="1">Contact ID</option>
+                                        <option value="2">Open</option>
+                                        <option value="3">Closed</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 ct">
+                                    <img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg" />
+                                </div>
+                            </div>
+                            <div class="row hover-crosshair">
+                                <div class="col-md-9 pr-0 pl-0">
+                                    <select class="form-control">
+                                        <option value="1">Customer</option>
+                                        <option value="2">Open</option>
+                                        <option value="3">Closed</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 ct">
+                                    <img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg" />
+                                </div>
+                            </div>
+                            <div class="row hover-crosshair">
+                                <div class="col-md-9 pr-0 pl-0">
+                                    <select class="form-control">
+                                        <option value="1">Category</option>
+                                        <option value="2">Open</option>
+                                        <option value="3">Closed</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 ct">
+                                    <img class="mt-12px hover-pointer" src="../img/ico-close-tab-2.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn btn-secondary width-100">Apply</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-outline-secondary width-100 primary border-grey"
+                                data-dismiss="modal" aria-label="Close">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / filter by modal -->
+        <script src="js/all.js"></script>
+    </body>
+
+</html>
