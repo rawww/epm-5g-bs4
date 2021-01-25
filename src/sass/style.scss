@@ -1050,7 +1050,7 @@ nav.navbar.nav-secondary {
 
 
 .content-wrapper {
-	height:100%; 
+	height:100%;
 }
 
 /* ==========================================================================
@@ -1089,11 +1089,8 @@ Sidebar
 
 .col-sidebar {
 	// @include fade-all;
-	margin-top:188px;
-	height: 100vh;
+	margin-top:134px;
   padding:0;
-	overflow-y:scroll;
-  overflow-x:hidden;
   .inner {
     padding:10px 20px;
     color:$primary;
@@ -1101,8 +1098,9 @@ Sidebar
 }
 
 .sidebar-cards {
-  padding-bottom:83px;
-
+  //padding-bottom:83px;
+	height:calc(100vh - 252px);
+	overflow-y:scroll;
   li {
     padding:15px 20px;
     border-bottom:1px solid $grey_dark;
@@ -1197,9 +1195,9 @@ Main Content
 ========================================================================== */
 
 .col-main-content {
-	margin-top:188px;
+	margin-top:134px;
   overflow-y: scroll;
-	height: 100vh;
+	height:calc(100vh - 188px);  
 
   background:$grey_light;
   padding:20px;
