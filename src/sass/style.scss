@@ -1875,6 +1875,14 @@ Swiper
 	font-size: 24px !important;
 }
 
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: -5px !important;
+}
+
+.swiper-pagination-bullet-active {
+	   background:$primary !important;
+}
+
 .swiper-scrollbar {
     position: absolute;
     left: 0 !important;
@@ -1895,13 +1903,22 @@ section.carousel-state {
 	padding-top:0;
 	background:transparent;
 
+	.swiper-slide {
+		&:hover {
+			cursor: -webkit-grab; cursor: grab;
+		}
+		&:active {
+			cursor: -webkit-grabbing; cursor: grabbing;
+		}
+	}
+
 	.swiper-button-next {
     right: -8px;
-    top: 43%;
+    top: 34%;
 	}
 	.swiper-button-prev {
 		left: -8px;
-    top: 43%;
+    top: 34%;
 	}
 }
 

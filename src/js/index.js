@@ -59,6 +59,11 @@ var mySwiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 
+  pagination: {
+  el: '.swiper-pagination',
+  clickable: 'true'
+  },
+
   // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
@@ -68,8 +73,7 @@ var mySwiper = new Swiper('.swiper-container', {
 
 //sidebar
 
-//close sidebar
-
+//close sidebar toggle
 
 $( ".close-sidebar" ).click(function() {
 
@@ -78,7 +82,6 @@ $( ".close-sidebar" ).click(function() {
   $(".open-sidebar-icon").toggleClass( "show" )
 
   $(".close-sidebar-icon").toggleClass( "show" )
-
 
   $( ".col-main-content" ).toggleClass( "col-md-12" )
 
