@@ -75,6 +75,25 @@ $spacers: map-merge(
   $spacers
 );
 
+.alert-dot-green-fill {
+  &:after {
+    background-color:$ui_1;
+  }
+}
+
+.alert-dot-amber-fill {
+  &:after {
+    background-color:$ui_3;
+  }
+}
+
+.alert-dot-red-fill {
+  &:after {
+    background-color:$ui_4;
+  }
+}
+
+
 .bg-ui-1 {
   &:after {
     background-color:$ui_1;
@@ -723,52 +742,52 @@ Navigation
 
 //alert dots
 
+.alert-dot {
+	position:relative;
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 2px;
+		right: 3px;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+	}
+}
+
+.nav-right .alert-dot {
+	&:after {
+		top: 18px;
+    right: 28px;
+	}
+}
+
 .alert-dot-black-border {
-  position:relative;
   &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 2px;
-    right: 3px;
-    width: 12px;
-    height: 12px;
     border: 2px solid #322450;
-    border-radius: 50%;
   }
 }
 .alert-dot-white-border {
-  position:relative;
   &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 2px;
-    right: 3px;
-    width: 12px;
-    height: 12px;
     border: 2px solid $white;
-    border-radius: 50%;
   }
 }
 
 
-  .alert-dot-black-border {
-    position:relative;
-    &:after {
-      top: 20px;
-      right: 29px;
-      border: 2px solid #322450;
-    }
+.alert-dot-black-border {
+  position:relative;
+  &:after {
+    border: 2px solid #322450;
   }
-  .alert-dot-white-border {
-    position:relative;
-    &:after {
-      top: 0;
-      right: 0;
-      border: 2px solid $white;
-    }
+}
+
+.alert-dot-white-border {
+  position:relative;
+  &:after {
+    border: 2px solid $white;
   }
+}
 
 
 nav.navbar {
