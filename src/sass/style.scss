@@ -776,14 +776,12 @@ Navigation
 
 
 .alert-dot-black-border {
-  position:relative;
   &:after {
     border: 2px solid #322450;
   }
 }
 
 .alert-dot-white-border {
-  position:relative;
   &:after {
     border: 2px solid $white;
   }
